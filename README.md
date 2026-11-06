@@ -15,6 +15,13 @@ Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y fi
 - Botón de consulta por WhatsApp con el nombre del producto ya escrito en el mensaje.
 - Diseño adaptable a celular y escritorio (CSS Grid).
 
+## Estado del proyecto
+
+Prototipo funcional. Próximos pasos:
+- Cargar las fotos de todos los productos
+- Agregar ordenamiento por precio
+- Conectar los datos a una base de datos en lugar de un archivo JSON
+- 
 ## Conceptos de JavaScript que practiqué
 
 - `fetch` + `async/await` + manejo de errores con `try/catch`
