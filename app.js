@@ -2,11 +2,10 @@
 const catalogo = document.getElementById("catalogo");
 const buscador = document.getElementById("buscador");
 const selectCategoria = document.getElementById("categoria");
-const checkStock = document.getElementById("solo-stock");
 const contador = document.getElementById("contador");
 const mensaje = document.getElementById("mensaje");
 
-// ---------- Datos y estado ----------
+// ---------- Datos ----------
 const URL_PRODUCTOS = "productos.json";
 const WHATSAPP = "5492944671384";
 
@@ -53,17 +52,16 @@ function cargarCategorias() {
 function filtrarProductos() {
   const texto = buscador.value.trim().toLowerCase();
   const categoria = selectCategoria.value;
-  const soloStock = checkStock.checked;
 
   return productos.filter((producto) => {
     const coincideTexto =
       producto.nombre.toLowerCase().includes(texto) ||
-      producto.descripcion.toLowerCase().includes(texto);
+      producto.subcategoria.toLowerCase().includes(texto) ||
+      producto.variantes.join(" ").toLowerCase().includes(texto);
     const coincideCategoria =
       categoria === "todas" || producto.categoria === categoria;
-    const coincideStock = !soloStock || producto.stock;
 
-    return coincideTexto && coincideCategoria && coincideStock;
+    return coincideTexto && coincideCategoria;
   });
 }
 
@@ -83,19 +81,24 @@ function crearTarjeta(producto) {
   );
   const link = `https://wa.me/${WHATSAPP}?text=${consulta}`;
 
+  const variantes = producto.variantes
+    .map((variante) => `<span>${variante}</span>`)
+    .join("");
+
+  // Si la foto no existe, onerror la borra y queda el emoji de fondo
   return `
-    <article class="tarjeta ${producto.stock ? "" : "agotado"}">
-      <div class="imagen" aria-hidden="true">${producto.emoji}</div>
+    <article class="tarjeta">
+      <div class="imagen">
+        <span aria-hidden="true">🧉</span>
+        <img src="imagenes/${producto.slug}.jpg" alt="${producto.nombre}"
+             loading="lazy" onerror="this.remove()">
+      </div>
       <div class="info">
-        <span class="categoria">${producto.categoria}</span>
+        <span class="categoria">${producto.subcategoria || producto.categoria}</span>
         <h2>${producto.nombre}</h2>
-        <p class="descripcion">${producto.descripcion}</p>
+        <div class="variantes">${variantes}</div>
         <p class="precio">${formatearPrecio(producto.precio)}</p>
-        <p class="estado ${producto.stock ? "" : "sin-stock"}">
-          ${producto.stock ? "En stock" : "Sin stock"}
-        </p>
-        <a class="boton ${producto.stock ? "" : "deshabilitado"}"
-           href="${link}" target="_blank" rel="noopener noreferrer">
+        <a class="boton" href="${link}" target="_blank" rel="noopener noreferrer">
           Consultar por WhatsApp
         </a>
       </div>
@@ -125,7 +128,6 @@ function mostrarProductos() {
 // ---------- Eventos: se vuelve a filtrar cada vez que el usuario cambia algo ----------
 buscador.addEventListener("input", mostrarProductos);
 selectCategoria.addEventListener("change", mostrarProductos);
-checkStock.addEventListener("change", mostrarProductos);
 
 // ---------- Arranque ----------
 cargarProductos();

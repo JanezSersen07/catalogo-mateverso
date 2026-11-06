@@ -1,15 +1,16 @@
 # Catálogo Mateverso
 
-Catálogo de productos con buscador y filtros, hecho con **HTML, CSS y JavaScript** (sin librerías). Los productos y precios son de ejemplo.
+Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y filtro por categoría. Hecho con **HTML, CSS y JavaScript** (sin librerías). Muestra más de 160 productos reales.
 
 🔗 **Ver online:** https://janezsersen07.github.io/catalogo-mateverso/
 
 ## Qué hace
 
 - Carga los productos desde un archivo `productos.json` usando `fetch` y `async/await`.
-- **Buscador** por nombre o descripción, que filtra mientras se escribe.
+- **Buscador** por nombre, subcategoría o variante (color, modelo), que filtra mientras se escribe.
 - **Filtro por categoría**: las opciones se generan solas a partir de los datos.
-- Opción **"Solo con stock"**.
+- Fotos de cada producto, con un respaldo si todavía no hay foto cargada.
+- Variantes de cada producto (colores, modelos) como etiquetas.
 - Contador de resultados y mensaje cuando no hay coincidencias.
 - Botón de consulta por WhatsApp con el nombre del producto ya escrito en el mensaje.
 - Diseño adaptable a celular y escritorio (CSS Grid).
@@ -30,7 +31,8 @@ catalogo-mateverso/
 ├── index.html       Estructura de la página
 ├── style.css        Estilos
 ├── app.js           Lógica (carga, filtros, render)
-└── productos.json   Datos de ejemplo
+├── productos.json   Datos de los productos
+└── imagenes/        Fotos (un archivo por producto, nombrado con su slug)
 ```
 
 ## Cómo probarlo en tu compu

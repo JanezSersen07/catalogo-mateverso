@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catálogo de productos de ejemplo con buscador y filtros, hecho con HTML, CSS y JavaScript.">
+  <meta name="description" content="Catálogo de productos de Mateverso con buscador y filtros por categoría, hecho con HTML, CSS y JavaScript.">
   <title>Catálogo Mateverso</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,7 +17,7 @@
     <section class="filtros" aria-label="Filtros del catálogo">
       <div class="campo">
         <label for="buscador">Buscar</label>
-        <input type="search" id="buscador" placeholder="Ej: bombilla, termo, yerba...">
+        <input type="search" id="buscador" placeholder="Ej: imperial, bombilla, termo...">
       </div>
 
       <div class="campo">
@@ -26,11 +26,6 @@
           <option value="todas">Todas</option>
         </select>
       </div>
-
-      <label class="check">
-        <input type="checkbox" id="solo-stock">
-        Solo con stock
-      </label>
     </section>
 
     <p id="contador" class="contador" aria-live="polite"></p>
@@ -41,7 +36,7 @@
   </main>
 
   <footer class="pie">
-    <p>Proyecto de portfolio · Productos y precios de ejemplo</p>
+    <p>Proyecto de portfolio · Los precios pueden no estar actualizados, consultá siempre por WhatsApp</p>
   </footer>
 
   <script src="app.js"></script>
