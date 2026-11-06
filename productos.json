@@ -1,0 +1,16 @@
+[
+  { "id": 1, "nombre": "Mate Imperial de cuero", "categoria": "Mates", "precio": 38000, "stock": true, "emoji": "🧉", "descripcion": "Calabaza forrada en cuero, boca ancha y base reforzada." },
+  { "id": 2, "nombre": "Mate Camionero de calabaza", "categoria": "Mates", "precio": 22000, "stock": true, "emoji": "🧉", "descripcion": "Clásico y resistente, ideal para todos los días." },
+  { "id": 3, "nombre": "Mate Torpedo de acero inoxidable", "categoria": "Mates", "precio": 27500, "stock": true, "emoji": "🧉", "descripcion": "No se curte ni se agrieta, fácil de limpiar." },
+  { "id": 4, "nombre": "Mate de madera de algarrobo", "categoria": "Mates", "precio": 19000, "stock": false, "emoji": "🧉", "descripcion": "Tallado a mano, mantiene bien la temperatura." },
+  { "id": 5, "nombre": "Bombilla pico de loro", "categoria": "Bombillas", "precio": 9500, "stock": true, "emoji": "🥤", "descripcion": "Acero inoxidable con filtro desmontable." },
+  { "id": 6, "nombre": "Bombilla de alpaca labrada", "categoria": "Bombillas", "precio": 16000, "stock": true, "emoji": "🥤", "descripcion": "Detalle labrado, acabado premium." },
+  { "id": 7, "nombre": "Bombilla resorte", "categoria": "Bombillas", "precio": 6000, "stock": false, "emoji": "🥤", "descripcion": "Filtro de resorte, no se tapa." },
+  { "id": 8, "nombre": "Yerba mate suave 1 kg", "categoria": "Yerbas", "precio": 7800, "stock": true, "emoji": "🌿", "descripcion": "Sabor equilibrado, molienda tradicional." },
+  { "id": 9, "nombre": "Yerba mate con palo 500 g", "categoria": "Yerbas", "precio": 4500, "stock": true, "emoji": "🌿", "descripcion": "Sabor intenso, la favorita de los que toman amargo." },
+  { "id": 10, "nombre": "Termo de acero 1 litro", "categoria": "Termos", "precio": 45000, "stock": true, "emoji": "☕", "descripcion": "Doble pared, mantiene el agua caliente por 24 horas." },
+  { "id": 11, "nombre": "Termo con pico cebador 1,2 litros", "categoria": "Termos", "precio": 52000, "stock": false, "emoji": "☕", "descripcion": "Pico cebador de precisión y tapa antiderrame." },
+  { "id": 12, "nombre": "Materas de cuero", "categoria": "Accesorios", "precio": 31000, "stock": true, "emoji": "🎒", "descripcion": "Lugar para mate, termo y yerbera." },
+  { "id": 13, "nombre": "Set de limpieza", "categoria": "Accesorios", "precio": 5200, "stock": true, "emoji": "🎒", "descripcion": "Cepillo y secador para el mate y la bombilla." },
+  { "id": 14, "nombre": "Yerbera y azucarera", "categoria": "Accesorios", "precio": 12500, "stock": true, "emoji": "🎒", "descripcion": "Set doble con tapa hermética." }
+]
