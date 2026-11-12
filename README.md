@@ -1,5 +1,5 @@
 # Catálogo Mateverso
-![Vista del catálogo](capturas/captura-catalogo.png)
+![Vista del catálogo](captura-catalogo.png)
 
 Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y filtro por categoría. Hecho con **HTML, CSS y JavaScript** (sin librerías). Muestra más de 160 productos reales.
 
