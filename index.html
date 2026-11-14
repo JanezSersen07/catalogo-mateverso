@@ -11,6 +11,7 @@
   <header class="encabezado">
     <h1>Catálogo Mateverso</h1>
     <p>El universo del mate. Buscá y filtrá los productos.</p>
+    <p class="encargo">Trabajamos por encargo: armá tu pedido y coordinamos el día de retiro por WhatsApp.</p>
   </header>
 
   <main class="contenedor">
@@ -38,6 +39,24 @@
   <footer class="pie">
     <p>Proyecto de portfolio · Los precios pueden no estar actualizados, consultá siempre por WhatsApp</p>
   </footer>
+
+  <button type="button" id="boton-pedido" class="boton-pedido" hidden>
+    Mi pedido <span id="cantidad-pedido" class="cantidad-pedido">0</span>
+  </button>
+
+  <dialog id="pedido" class="galeria pedido" aria-labelledby="pedido-titulo">
+    <div class="galeria-cabecera">
+      <h2 id="pedido-titulo">Mi pedido</h2>
+      <button type="button" id="pedido-cerrar" class="galeria-cerrar" aria-label="Cerrar">✕</button>
+    </div>
+    <ul id="pedido-lista" class="pedido-lista"></ul>
+    <p class="pedido-total">Total estimado: <strong id="pedido-total"></strong></p>
+    <p class="pedido-nota">Trabajamos por encargo. Al enviar el pedido por WhatsApp te confirmamos precios, disponibilidad y el día de retiro.</p>
+    <div class="pedido-acciones">
+      <a id="pedido-enviar" class="boton" href="#" target="_blank" rel="noopener noreferrer">Enviar pedido por WhatsApp</a>
+      <button type="button" id="pedido-vaciar" class="pedido-vaciar">Vaciar pedido</button>
+    </div>
+  </dialog>
 
   <dialog id="galeria" class="galeria" aria-labelledby="galeria-titulo">
     <div class="galeria-cabecera">

@@ -1,5 +1,4 @@
 # Catálogo Mateverso
-![Vista del catálogo](captura-catalogo.png)
 
 Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y filtro por categoría. Hecho con **HTML, CSS y JavaScript** (sin librerías). Muestra más de 160 productos reales.
 
@@ -63,3 +62,14 @@ Las fotos originales son pesadas, así que `preparar-fotos.ps1` las copia y achi
 .\preparar-fotos.ps1 -Origen "C:\ruta\a\PRODUCTOS" -Prueba   # prueba con 3 fotos
 .\preparar-fotos.ps1 -Origen "C:\ruta\a\PRODUCTOS"           # todas
 ```
+
+## Pedido por WhatsApp
+
+Mateverso trabaja por encargo, así que el catálogo permite armar un pedido y enviarlo por WhatsApp:
+
+- Cada tarjeta tiene "Agregar al pedido". Si el producto tiene variantes (color, diseño), hay que elegir una antes.
+- El botón flotante "Mi pedido" abre el detalle: se puede sumar, restar o quitar productos, y muestra el total estimado.
+- "Enviar pedido por WhatsApp" abre el chat con el mensaje armado (productos, variantes, cantidades, total y la consulta por el día de retiro).
+- El pedido se guarda en el navegador (`localStorage`), así que no se pierde si se cierra la página.
+- Los precios se leen de `productos.json` cada vez, por lo que si cambian, el pedido se actualiza solo.
+- El pedido no cobra ni controla stock: es un mensaje armado. El pago, la disponibilidad y el día de retiro se coordinan por WhatsApp.

@@ -287,3 +287,160 @@ button.chip.activo {
   font-size: 0.85rem;
   color: var(--gris);
 }
+
+/* ---------- Pedido ---------- */
+.encabezado .encargo {
+  font-size: 0.9rem;
+}
+
+.boton-agregar {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.enlace-consulta {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--verde);
+}
+
+.enlace-consulta:hover,
+.enlace-consulta:focus-visible {
+  color: var(--verde-oscuro);
+}
+
+.aviso {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9b2c2c;
+}
+
+.boton-pedido {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  padding: 12px 18px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--verde-oscuro);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.boton-pedido:hover,
+.boton-pedido:focus-visible {
+  background-color: var(--verde);
+}
+
+.cantidad-pedido {
+  display: inline-block;
+  min-width: 24px;
+  margin-left: 6px;
+  padding: 1px 7px;
+  text-align: center;
+  color: var(--verde-oscuro);
+  background-color: #ffffff;
+  border-radius: 999px;
+}
+
+.pedido {
+  width: min(520px, 94vw);
+}
+
+.pedido-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 50vh;
+  margin-bottom: 12px;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.pedido-item {
+  padding: 10px 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.pedido-datos {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.pedido-cantidad {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pedido-cantidad button {
+  min-width: 34px;
+  padding: 4px 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--verde-oscuro);
+  background-color: var(--verde-claro);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pedido-cantidad .pedido-quitar {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #9b2c2c;
+  background: none;
+  text-decoration: underline;
+}
+
+.pedido-vacio {
+  padding: 16px;
+  text-align: center;
+  color: var(--gris);
+}
+
+.pedido-total {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.pedido-nota {
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+.pedido-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pedido-acciones [aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.pedido-vaciar {
+  padding: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--gris);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
