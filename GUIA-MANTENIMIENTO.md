@@ -96,6 +96,15 @@ Las variantes que no estén en `fotosVariantes` se ven como etiqueta, sin botón
 
 ---
 
+## 3b. Agregar o cambiar la foto de un producto
+
+- **Foto principal:** poné la foto nueva en `imagenes/`. Si usás el mismo nombre que la vieja, la reemplaza sin tocar el JSON. Si usás otro nombre, actualizá el campo `"foto"` del producto.
+- **Foto de una variante:** agregá o editá `fotosVariantes` con una foto por variante (ver ejemplo arriba). Al tocar el botón de la variante, cambia la imagen.
+- Achicá la foto antes (unos 900 px, JPG) para que la página cargue rápido.
+- Si cambiaste una foto con el mismo nombre y seguís viendo la vieja, refrescá con Ctrl + F5: el navegador guarda la anterior.
+
+---
+
 ## 4. Errores típicos del JSON
 
 - **Falta una coma** entre bloques, o **sobra** una después del último. Es el error más común.
