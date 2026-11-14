@@ -6,7 +6,8 @@
     "categoria": "Algarrobo",
     "subcategoria": "Roma",
     "precio": 53900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/algarrobo-roma-2.jpg"
   },
   {
     "id": 2,
@@ -19,7 +20,13 @@
       "Manchas Blancas",
       "Animal Print",
       "Manchas Negras"
-    ]
+    ],
+    "foto": "imagenes/ranchero-pintado--manchas-blancas.jpg",
+    "fotosVariantes": {
+      "Animal Print": "imagenes/ranchero-pintado--animal-print.jpg",
+      "Manchas Blancas": "imagenes/ranchero-pintado--manchas-blancas.jpg",
+      "Manchas Negras": "imagenes/ranchero-pintado--manchas-negras.jpg"
+    }
   },
   {
     "id": 3,
@@ -28,7 +35,8 @@
     "categoria": "Algarrobo",
     "subcategoria": "Rancheros",
     "precio": 35900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/ranchero-marron.jpg"
   },
   {
     "id": 4,
@@ -37,7 +45,8 @@
     "categoria": "Algarrobo",
     "subcategoria": "Torpedo Alg",
     "precio": 30900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/algarrobo-torpedo.jpg"
   },
   {
     "id": 5,
@@ -45,8 +54,9 @@
     "nombre": "Algarrobo Roma",
     "categoria": "Algarrobo",
     "subcategoria": "Roma",
-    "precio": 53900,
-    "variantes": []
+    "precio": 50000,
+    "variantes": [],
+    "foto": "imagenes/algarrobo-roma.jpg"
   },
   {
     "id": 6,
@@ -54,11 +64,16 @@
     "nombre": "Algarrobo Imperial con Dije de Sol",
     "categoria": "Algarrobo",
     "subcategoria": "Imperial Alg",
-    "precio": 36900,
+    "precio": 36000,
     "variantes": [
       "Dije en Madera",
       "Dije en Fleje"
-    ]
+    ],
+    "foto": "imagenes/algarrobo-imperial-con-dije-de-sol--dije-en-madera.jpg",
+    "fotosVariantes": {
+      "Dije en Fleje": "imagenes/algarrobo-imperial-con-dije-de-sol--dije-en-fleje.jpg",
+      "Dije en Madera": "imagenes/algarrobo-imperial-con-dije-de-sol--dije-en-madera.jpg"
+    }
   },
   {
     "id": 7,
@@ -66,8 +81,9 @@
     "nombre": "Algarrobo Imperial",
     "categoria": "Algarrobo",
     "subcategoria": "Imperial Alg",
-    "precio": 26900,
-    "variantes": []
+    "precio": 26000,
+    "variantes": [],
+    "foto": "imagenes/algarrobo-imperial.jpg"
   },
   {
     "id": 8,
@@ -75,8 +91,9 @@
     "nombre": "Algarrobo Perita",
     "categoria": "Algarrobo",
     "subcategoria": "Perita Alg",
-    "precio": 8900,
-    "variantes": []
+    "precio": 9000,
+    "variantes": [],
+    "foto": "imagenes/algarrobo-perita.jpg"
   },
   {
     "id": 9,
@@ -85,7 +102,8 @@
     "categoria": "Algarrobo",
     "subcategoria": "Camionero Alg",
     "precio": 15900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/algarrobo-camionero-brilloso.jpg"
   },
   {
     "id": 10,
@@ -94,7 +112,8 @@
     "categoria": "Algarrobo",
     "subcategoria": "Camionero Alg",
     "precio": 16900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/algarrobo-camionero.jpg"
   },
   {
     "id": 11,
@@ -103,7 +122,8 @@
     "categoria": "Algarrobo",
     "subcategoria": "Camionero Alg",
     "precio": 26900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/algarrobo-camionero-con-fleje-bajo-de-alpaca.jpg"
   },
   {
     "id": 12,
@@ -111,11 +131,12 @@
     "nombre": "Bombillon Doble Aro Alpaca/Bronce",
     "categoria": "Bombillas",
     "subcategoria": "Gualeguay",
-    "precio": 29900,
+    "precio": 27000,
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-doble-aro-alpaca-bronce.jpg"
   },
   {
     "id": 13,
@@ -127,7 +148,8 @@
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-cincelado-alpaca-bronce.jpg"
   },
   {
     "id": 14,
@@ -136,7 +158,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Con Dije",
     "precio": 37900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombillon-con-dije-de-river.jpg"
   },
   {
     "id": 15,
@@ -145,7 +168,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Con Dije",
     "precio": 34900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombillon-con-dije-de-boca.jpg"
   },
   {
     "id": 16,
@@ -153,8 +177,9 @@
     "nombre": "Bombillon con Dije Campeones del Mundo",
     "categoria": "Bombillas",
     "subcategoria": "Con Dije",
-    "precio": 43900,
-    "variantes": []
+    "precio": 39900,
+    "variantes": [],
+    "foto": "imagenes/bombillon-con-dije-campeones-del-mundo.jpg"
   },
   {
     "id": 17,
@@ -163,7 +188,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Con Dije",
     "precio": 34900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombillon-con-dije-afa.jpg"
   },
   {
     "id": 18,
@@ -172,7 +198,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Con Dije",
     "precio": 37900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombillon-con-dije-de-sol.jpg"
   },
   {
     "id": 19,
@@ -184,7 +211,12 @@
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-100-alpaca-con-doble-dije-de-bronce--pico-loro.jpg",
+    "fotosVariantes": {
+      "Pico Loro": "imagenes/bombillon-100-alpaca-con-doble-dije-de-bronce--pico-loro.jpg",
+      "Pico Rey": "imagenes/bombillon-100-alpaca-con-doble-dije-de-bronce--pico-rey.jpg"
+    }
   },
   {
     "id": 20,
@@ -192,8 +224,9 @@
     "nombre": "Bombillon Premium Súper Curvo",
     "categoria": "Bombillas",
     "subcategoria": "Premium",
-    "precio": 45900,
-    "variantes": []
+    "precio": 42000,
+    "variantes": [],
+    "foto": "imagenes/bombillon-premium-super-curvo.jpg"
   },
   {
     "id": 21,
@@ -205,7 +238,12 @@
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-con-cano-labrado-alpaca-bronce--pico-loro.jpg",
+    "fotosVariantes": {
+      "Pico Loro": "imagenes/bombillon-con-cano-labrado-alpaca-bronce--pico-loro.jpg",
+      "Pico Rey": "imagenes/bombillon-con-cano-labrado-alpaca-bronce--pico-rey.jpg"
+    }
   },
   {
     "id": 22,
@@ -217,7 +255,12 @@
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-gauchito-alpaca-bronce--pico-loro.jpg",
+    "fotosVariantes": {
+      "Pico Loro": "imagenes/bombillon-gauchito-alpaca-bronce--pico-loro.jpg",
+      "Pico Rey": "imagenes/bombillon-gauchito-alpaca-bronce--pico-rey.jpg"
+    }
   },
   {
     "id": 23,
@@ -225,11 +268,16 @@
     "nombre": "Bombillon Gauchito 100% Alpaca",
     "categoria": "Bombillas",
     "subcategoria": "Gauchito",
-    "precio": 65900,
+    "precio": 60000,
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-gauchito-100-alpaca--pico-loro.jpg",
+    "fotosVariantes": {
+      "Pico Loro": "imagenes/bombillon-gauchito-100-alpaca--pico-loro.jpg",
+      "Pico Rey": "imagenes/bombillon-gauchito-100-alpaca--pico-rey.jpg"
+    }
   },
   {
     "id": 24,
@@ -238,7 +286,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Mini",
     "precio": 28900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombillon-mini-100-alpaca.jpg"
   },
   {
     "id": 25,
@@ -247,7 +296,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Mini",
     "precio": 28900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombillon-mini-alpaca-bronce.jpg"
   },
   {
     "id": 26,
@@ -255,11 +305,16 @@
     "nombre": "Bombillon Premium Mini",
     "categoria": "Bombillas",
     "subcategoria": "Premium",
-    "precio": 34900,
+    "precio": 32000,
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-premium-mini--pico-loro.jpg",
+    "fotosVariantes": {
+      "Pico Loro": "imagenes/bombillon-premium-mini--pico-loro.jpg",
+      "Pico Rey": "imagenes/bombillon-premium-mini--pico-rey.jpg"
+    }
   },
   {
     "id": 27,
@@ -268,7 +323,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Acero Chata",
     "precio": 3590,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombilla-acero-chata.jpg"
   },
   {
     "id": 28,
@@ -277,7 +333,8 @@
     "categoria": "Bombillas",
     "subcategoria": "Acero Chata",
     "precio": 3790,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/bombilla-acero-chata-con-cano-redondo.jpg"
   },
   {
     "id": 29,
@@ -285,8 +342,9 @@
     "nombre": "Bombilla Acero/Bronce con Pala",
     "categoria": "Bombillas",
     "subcategoria": "Acero con Pala",
-    "precio": 7900,
-    "variantes": []
+    "precio": 8000,
+    "variantes": [],
+    "foto": "imagenes/bombilla-acero-bronce-con-pala.jpg"
   },
   {
     "id": 30,
@@ -294,11 +352,16 @@
     "nombre": "Bombilla Acero Caño Trenzado con Pala",
     "categoria": "Bombillas",
     "subcategoria": "Acero con Pala",
-    "precio": 6900,
+    "precio": 7000,
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombilla-acero-cano-trenzado-con-pala--pico-loro.jpg",
+    "fotosVariantes": {
+      "Pico Loro": "imagenes/bombilla-acero-cano-trenzado-con-pala--pico-loro.jpg",
+      "Pico Rey": "imagenes/bombilla-acero-cano-trenzado-con-pala--pico-rey.jpg"
+    }
   },
   {
     "id": 31,
@@ -310,7 +373,12 @@
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombilla-acero-con-pala--pico-loro.jpg",
+    "fotosVariantes": {
+      "Pico Loro": "imagenes/bombilla-acero-con-pala--pico-loro.jpg",
+      "Pico Rey": "imagenes/bombilla-acero-con-pala--pico-rey.jpg"
+    }
   },
   {
     "id": 32,
@@ -322,7 +390,8 @@
     "variantes": [
       "Pico Loro",
       "Pico Rey"
-    ]
+    ],
+    "foto": "imagenes/bombillon-simple-alpaca-bronce.jpg"
   },
   {
     "id": 33,
@@ -330,8 +399,9 @@
     "nombre": "Termo Luminox Original Acero",
     "categoria": "Termos",
     "subcategoria": "Otros Modelos",
-    "precio": 88900,
-    "variantes": []
+    "precio": 75000,
+    "variantes": [],
+    "foto": "imagenes/termo-luminox-original-acero.jpg"
   },
   {
     "id": 34,
@@ -340,7 +410,8 @@
     "categoria": "Termos",
     "subcategoria": "Otros Modelos",
     "precio": 35900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/termo-automate-750ml.jpg"
   },
   {
     "id": 35,
@@ -352,7 +423,12 @@
     "variantes": [
       "Rosa",
       "Verde"
-    ]
+    ],
+    "foto": "imagenes/termo-con-manija-1-2lt--rosa.jpg",
+    "fotosVariantes": {
+      "Rosa": "imagenes/termo-con-manija-1-2lt--rosa.jpg",
+      "Verde": "imagenes/termo-con-manija-1-2lt--verde.jpg"
+    }
   },
   {
     "id": 36,
@@ -360,8 +436,9 @@
     "nombre": "Termo System Negro 1lt",
     "categoria": "Termos",
     "subcategoria": "System",
-    "precio": 39900,
-    "variantes": []
+    "precio": 35000,
+    "variantes": [],
+    "foto": "imagenes/termo-system-negro-1lt.jpg"
   },
   {
     "id": 37,
@@ -370,7 +447,8 @@
     "categoria": "Termos",
     "subcategoria": "Media Manija",
     "precio": 26900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/termo-media-manija-acero-1lt.jpg"
   },
   {
     "id": 38,
@@ -378,8 +456,9 @@
     "nombre": "Termo Media Manija Negro 1lt",
     "categoria": "Termos",
     "subcategoria": "Media Manija",
-    "precio": 30900,
-    "variantes": []
+    "precio": 28000,
+    "variantes": [],
+    "foto": "imagenes/termo-media-manija-negro-1lt.jpg"
   },
   {
     "id": 39,
@@ -388,7 +467,8 @@
     "categoria": "Termos",
     "subcategoria": "Bala",
     "precio": 19900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/termo-bala-negro-500ml.jpg"
   },
   {
     "id": 40,
@@ -397,7 +477,8 @@
     "categoria": "Termos",
     "subcategoria": "Bala",
     "precio": 22900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/termo-bala-acero-1lt.jpg"
   },
   {
     "id": 41,
@@ -405,8 +486,9 @@
     "nombre": "Lata Yerbera Baldo 500gr",
     "categoria": "Chaulatas, yerberos y azucareras",
     "subcategoria": "Latas",
-    "precio": 34900,
-    "variantes": []
+    "precio": 29000,
+    "variantes": [],
+    "foto": "imagenes/lata-yerbera-baldo-500gr.jpg"
   },
   {
     "id": 42,
@@ -419,7 +501,13 @@
       "River Plate",
       "Boca Juniors",
       "Messi"
-    ]
+    ],
+    "foto": "imagenes/latas-yerbero-azucarero-con-diseno--river-plate.jpg",
+    "fotosVariantes": {
+      "Boca Juniors": "imagenes/latas-yerbero-azucarero-con-diseno--boca-juniors.jpg",
+      "Messi": "imagenes/latas-yerbero-azucarero-con-diseno--messi.jpg",
+      "River Plate": "imagenes/latas-yerbero-azucarero-con-diseno--river-plate.jpg"
+    }
   },
   {
     "id": 43,
@@ -428,7 +516,8 @@
     "categoria": "Chaulatas, yerberos y azucareras",
     "subcategoria": "Chaulatas",
     "precio": 8900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/chaulata-yerbero-azucarero-de-cuerina.jpg"
   },
   {
     "id": 44,
@@ -440,7 +529,12 @@
     "variantes": [
       "Negro/Suela",
       "Verde/Suela"
-    ]
+    ],
+    "foto": "imagenes/chaulata-yerbero-azucarero-de-tela-y-cuero--negro-suela.jpg",
+    "fotosVariantes": {
+      "Negro/Suela": "imagenes/chaulata-yerbero-azucarero-de-tela-y-cuero--negro-suela.jpg",
+      "Verde/Suela": "imagenes/chaulata-yerbero-azucarero-de-tela-y-cuero--verde-suela.jpg"
+    }
   },
   {
     "id": 45,
@@ -453,7 +547,13 @@
       "Negro",
       "Verde",
       "Rosa"
-    ]
+    ],
+    "foto": "imagenes/chaulata-yerbero-azucarero-de-tela--negro.jpg",
+    "fotosVariantes": {
+      "Negro": "imagenes/chaulata-yerbero-azucarero-de-tela--negro.jpg",
+      "Rosa": "imagenes/chaulata-yerbero-azucarero-de-tela--rosa.jpg",
+      "Verde": "imagenes/chaulata-yerbero-azucarero-de-tela--verde.jpg"
+    }
   },
   {
     "id": 46,
@@ -462,7 +562,8 @@
     "categoria": "Chaulatas, yerberos y azucareras",
     "subcategoria": "Chaulatas",
     "precio": 10900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/chaulata-yerbero-de-gamuza.jpg"
   },
   {
     "id": 47,
@@ -470,8 +571,9 @@
     "nombre": "Yerba Baldo 5kg",
     "categoria": "Yerbas",
     "subcategoria": "5 kg",
-    "precio": 65900,
-    "variantes": []
+    "precio": 60000,
+    "variantes": [],
+    "foto": "imagenes/yerba-baldo-5kg.jpg"
   },
   {
     "id": 48,
@@ -479,8 +581,9 @@
     "nombre": "Yerba Baldo 1kg",
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
-    "precio": 22900,
-    "variantes": []
+    "precio": 13500,
+    "variantes": [],
+    "foto": "imagenes/yerba-baldo-1kg.jpg"
   },
   {
     "id": 49,
@@ -488,8 +591,9 @@
     "nombre": "Yerba Verdecita 1kg",
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
-    "precio": 14900,
-    "variantes": []
+    "precio": 9000,
+    "variantes": [],
+    "foto": "imagenes/yerba-verdecita-1kg.jpg"
   },
   {
     "id": 50,
@@ -497,8 +601,9 @@
     "nombre": "Yerba Sara Tradicional 1kg",
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
-    "precio": 15900,
-    "variantes": []
+    "precio": 13500,
+    "variantes": [],
+    "foto": "imagenes/yerba-sara-tradicional-1kg.jpg"
   },
   {
     "id": 51,
@@ -506,8 +611,9 @@
     "nombre": "Yerba Sara Extra Suave 1kg",
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
-    "precio": 15900,
-    "variantes": []
+    "precio": 13500,
+    "variantes": [],
+    "foto": "imagenes/yerba-sara-extra-suave-1kg.jpg"
   },
   {
     "id": 52,
@@ -515,8 +621,9 @@
     "nombre": "Yerba Reí Verde Premium Export 1kg",
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
-    "precio": 12900,
-    "variantes": []
+    "precio": 13000,
+    "variantes": [],
+    "foto": "imagenes/yerba-rei-verde-premium-export-1kg.jpg"
   },
   {
     "id": 53,
@@ -524,8 +631,9 @@
     "nombre": "Yerba Reí Verde Tradicional Export 1kg",
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
-    "precio": 11900,
-    "variantes": []
+    "precio": 11000,
+    "variantes": [],
+    "foto": "imagenes/yerba-rei-verde-tradicional-export-1kg.jpg"
   },
   {
     "id": 54,
@@ -533,8 +641,9 @@
     "nombre": "Yerba Esmeralda 1kg",
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
-    "precio": 15900,
-    "variantes": []
+    "precio": 14000,
+    "variantes": [],
+    "foto": "imagenes/yerba-esmeralda-1kg.jpg"
   },
   {
     "id": 55,
@@ -543,7 +652,8 @@
     "categoria": "Yerbas",
     "subcategoria": "1 kg",
     "precio": 9900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/yerba-barao-1kg.jpg"
   },
   {
     "id": 56,
@@ -551,8 +661,9 @@
     "nombre": "Yerba Canarias Edición Especial 500gr",
     "categoria": "Yerbas",
     "subcategoria": "500 gr",
-    "precio": 8900,
-    "variantes": []
+    "precio": 7000,
+    "variantes": [],
+    "foto": "imagenes/yerba-canarias-edicion-especial-500gr.jpg"
   },
   {
     "id": 57,
@@ -560,8 +671,9 @@
     "nombre": "Yerba Baldo 500gr",
     "categoria": "Yerbas",
     "subcategoria": "500 gr",
-    "precio": 6900,
-    "variantes": []
+    "precio": 7000,
+    "variantes": [],
+    "foto": "imagenes/yerba-baldo-500gr.jpg"
   },
   {
     "id": 58,
@@ -570,7 +682,8 @@
     "categoria": "Yerbas",
     "subcategoria": "500 gr",
     "precio": 5900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/yerba-verdecita-500gr.jpg"
   },
   {
     "id": 59,
@@ -579,7 +692,8 @@
     "categoria": "Yerbas",
     "subcategoria": "500 gr",
     "precio": 8900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/yerba-rei-verde-premium-export-500gr.jpg"
   },
   {
     "id": 60,
@@ -587,8 +701,9 @@
     "nombre": "Yerba Reí Verde Clásica Export 500gr",
     "categoria": "Yerbas",
     "subcategoria": "500 gr",
-    "precio": 6900,
-    "variantes": []
+    "precio": 5500,
+    "variantes": [],
+    "foto": "imagenes/yerba-rei-verde-clasica-export-500gr.jpg"
   },
   {
     "id": 61,
@@ -597,7 +712,8 @@
     "categoria": "Yerbas",
     "subcategoria": "500 gr",
     "precio": 6900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/yerba-barao-500gr.jpg"
   },
   {
     "id": 62,
@@ -606,7 +722,8 @@
     "categoria": "Yerbas",
     "subcategoria": "500 gr",
     "precio": 10900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/yerba-sara-coco-500gr.jpg"
   },
   {
     "id": 63,
@@ -615,7 +732,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Cajas de Presentación",
     "precio": 5900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/caja-de-presentacion-bombilla.jpg"
   },
   {
     "id": 64,
@@ -624,7 +742,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Cajas de Presentación",
     "precio": 23900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/caja-de-presentacion-mate-termo-bombilla.jpg"
   },
   {
     "id": 65,
@@ -639,7 +758,15 @@
       "Blanco",
       "Azul",
       "Celeste/Blanco"
-    ]
+    ],
+    "foto": "imagenes/caja-de-presentacion-mate-bombilla--negro.jpg",
+    "fotosVariantes": {
+      "Negro": "imagenes/caja-de-presentacion-mate-bombilla--negro.jpg",
+      "Rosa": "imagenes/caja-de-presentacion-mate-bombilla--rosa.jpg",
+      "Blanco": "imagenes/caja-de-presentacion-mate-bombilla--blanco.jpg",
+      "Azul": "imagenes/caja-de-presentacion-mate-bombilla--azul.jpg",
+      "Celeste/Blanco": "imagenes/caja-de-presentacion-mate-bombilla--celeste-blanco.jpg"
+    }
   },
   {
     "id": 66,
@@ -651,7 +778,12 @@
     "variantes": [
       "Boca",
       "AFA"
-    ]
+    ],
+    "foto": "imagenes/dije-de-bronce-pintados--boca.jpg",
+    "fotosVariantes": {
+      "AFA": "imagenes/dije-de-bronce-pintados--afa.jpg",
+      "Boca": "imagenes/dije-de-bronce-pintados--boca.jpg"
+    }
   },
   {
     "id": 67,
@@ -663,7 +795,12 @@
     "variantes": [
       "Boca",
       "AFA"
-    ]
+    ],
+    "foto": "imagenes/dije-de-bronce-escudos--boca.jpg",
+    "fotosVariantes": {
+      "AFA": "imagenes/dije-de-bronce-escudos--afa.jpg",
+      "Boca": "imagenes/dije-de-bronce-escudos--boca.jpg"
+    }
   },
   {
     "id": 68,
@@ -672,7 +809,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Dijes de Bronce",
     "precio": 12900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/dije-de-bronce-sol-de-mayo.jpg"
   },
   {
     "id": 69,
@@ -681,7 +819,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Dijes de Bronce",
     "precio": 8900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/dije-de-bronce-afa.jpg"
   },
   {
     "id": 70,
@@ -690,7 +829,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Dijes de Bronce",
     "precio": 8900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/dije-de-bronce-10-con-sol.jpg"
   },
   {
     "id": 71,
@@ -699,7 +839,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Dijes de Bronce",
     "precio": 12900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/dije-de-bronce-bandera-de-chile.jpg"
   },
   {
     "id": 72,
@@ -708,7 +849,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Varios",
     "precio": 15900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/cosito-para-el-mate.jpg"
   },
   {
     "id": 73,
@@ -717,7 +859,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Varios",
     "precio": 1290,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/escalon-para-montanita.jpg"
   },
   {
     "id": 74,
@@ -726,7 +869,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Varios",
     "precio": 43900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/valija-mesa-matera.jpg"
   },
   {
     "id": 75,
@@ -735,7 +879,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Varios",
     "precio": 17900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/kit-tapa-mate-bombilla.jpg"
   },
   {
     "id": 76,
@@ -744,7 +889,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Varios",
     "precio": 6900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/luz-matera.jpg"
   },
   {
     "id": 77,
@@ -753,7 +899,8 @@
     "categoria": "Accesorios",
     "subcategoria": "Varios",
     "precio": 16900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/despolvillador-3-partes-negro.jpg"
   },
   {
     "id": 78,
@@ -761,8 +908,9 @@
     "nombre": "Combo Matero 1",
     "categoria": "Combos",
     "subcategoria": "Combos Armados",
-    "precio": 55900,
-    "variantes": []
+    "precio": 53000,
+    "variantes": [],
+    "foto": "imagenes/combo-matero-1.jpg"
   },
   {
     "id": 79,
@@ -770,8 +918,9 @@
     "nombre": "Combo Matero 2",
     "categoria": "Combos",
     "subcategoria": "Combos Armados",
-    "precio": 59900,
-    "variantes": []
+    "precio": 57000,
+    "variantes": [],
+    "foto": "imagenes/combo-matero-2.jpg"
   },
   {
     "id": 80,
@@ -779,8 +928,9 @@
     "nombre": "Combo Matero 3",
     "categoria": "Combos",
     "subcategoria": "Combos Armados",
-    "precio": 39900,
-    "variantes": []
+    "precio": 38000,
+    "variantes": [],
+    "foto": "imagenes/combo-matero-3.jpg"
   },
   {
     "id": 81,
@@ -789,7 +939,8 @@
     "categoria": "Combos",
     "subcategoria": "Combos Armados",
     "precio": 24900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/combo-matero-4.jpg"
   },
   {
     "id": 82,
@@ -798,7 +949,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-river-plate.jpg"
   },
   {
     "id": 83,
@@ -807,7 +959,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-boca-juniors.jpg"
   },
   {
     "id": 84,
@@ -816,7 +969,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-lionel-messi.jpg"
   },
   {
     "id": 85,
@@ -825,7 +979,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-cultura-argentina.jpg"
   },
   {
     "id": 86,
@@ -834,7 +989,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-los-simpsons.jpg"
   },
   {
     "id": 87,
@@ -843,7 +999,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-indio-solari.jpg"
   },
   {
     "id": 88,
@@ -852,7 +1009,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-las-pastillas-del-abuelo.jpg"
   },
   {
     "id": 89,
@@ -861,7 +1019,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-stranger-things.jpg"
   },
   {
     "id": 90,
@@ -870,7 +1029,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-harry-potter.jpg"
   },
   {
     "id": 91,
@@ -879,7 +1039,8 @@
     "categoria": "Box armados",
     "subcategoria": "Box Temáticos / Deportivos",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-malvinas-argentinas.jpg"
   },
   {
     "id": 92,
@@ -888,7 +1049,8 @@
     "categoria": "Box armados",
     "subcategoria": "Combos Fechas Especiales",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-dia-del-padre-2.jpg"
   },
   {
     "id": 93,
@@ -897,7 +1059,8 @@
     "categoria": "Box armados",
     "subcategoria": "Combos Fechas Especiales",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-feliz-cumpleanos.jpg"
   },
   {
     "id": 94,
@@ -906,7 +1069,8 @@
     "categoria": "Box armados",
     "subcategoria": "Combos Fechas Especiales",
     "precio": 58900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-dia-del-padre-1.jpg"
   },
   {
     "id": 95,
@@ -915,7 +1079,8 @@
     "categoria": "Box armados",
     "subcategoria": "Combos Fechas Especiales",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-dia-de-la-maestra.jpg"
   },
   {
     "id": 96,
@@ -924,7 +1089,8 @@
     "categoria": "Box armados",
     "subcategoria": "Combos Fechas Especiales",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-dia-del-profesor.jpg"
   },
   {
     "id": 97,
@@ -933,7 +1099,8 @@
     "categoria": "Box armados",
     "subcategoria": "Combos Fechas Especiales",
     "precio": 31900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/box-dia-de-la-madre.jpg"
   },
   {
     "id": 98,
@@ -947,7 +1114,14 @@
       "Marrón",
       "Borravino",
       "Suela"
-    ]
+    ],
+    "foto": "imagenes/portamate-100-cuero-liso--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/portamate-100-cuero-liso--borravino.jpg",
+      "Marrón": "imagenes/portamate-100-cuero-liso--marron.jpg",
+      "Negro": "imagenes/portamate-100-cuero-liso--negro.jpg",
+      "Suela": "imagenes/portamate-100-cuero-liso--suela.jpg"
+    }
   },
   {
     "id": 99,
@@ -955,8 +1129,9 @@
     "nombre": "Imperial Premium Argentina",
     "categoria": "Imperiales",
     "subcategoria": "Otros",
-    "precio": 154900,
-    "variantes": []
+    "precio": 100000,
+    "variantes": [],
+    "foto": "imagenes/imperial-premium-argentina.jpg"
   },
   {
     "id": 100,
@@ -968,7 +1143,12 @@
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/imperial-repujado-con-guarda-recortada-hojita--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/imperial-repujado-con-guarda-recortada-hojita--borravino.jpg",
+      "Negro": "imagenes/imperial-repujado-con-guarda-recortada-hojita--negro.jpg"
+    }
   },
   {
     "id": 101,
@@ -976,8 +1156,9 @@
     "nombre": "Imperial Roma con Virola Invertida",
     "categoria": "Imperiales",
     "subcategoria": "Roma",
-    "precio": 57900,
-    "variantes": []
+    "precio": 50000,
+    "variantes": [],
+    "foto": "imagenes/imperial-roma-con-virola-invertida.jpg"
   },
   {
     "id": 102,
@@ -985,8 +1166,9 @@
     "nombre": "Imperial Roma con Dije de Sol",
     "categoria": "Imperiales",
     "subcategoria": "Roma",
-    "precio": 70900,
-    "variantes": []
+    "precio": 60000,
+    "variantes": [],
+    "foto": "imagenes/imperial-roma-con-dije-de-sol.jpg"
   },
   {
     "id": 103,
@@ -994,11 +1176,16 @@
     "nombre": "Imperial Roma",
     "categoria": "Imperiales",
     "subcategoria": "Roma",
-    "precio": 55900,
+    "precio": 52000,
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/imperial-roma--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/imperial-roma--borravino.jpg",
+      "Negro": "imagenes/imperial-roma--negro.jpg"
+    }
   },
   {
     "id": 104,
@@ -1006,8 +1193,9 @@
     "nombre": "Imperial Repujado Argentina con Dije de Sol",
     "categoria": "Imperiales",
     "subcategoria": "Argentina",
-    "precio": 79900,
-    "variantes": []
+    "precio": 70000,
+    "variantes": [],
+    "foto": "imagenes/imperial-repujado-argentina-con-dije-de-sol.jpg"
   },
   {
     "id": 105,
@@ -1019,7 +1207,12 @@
     "variantes": [
       "Negro",
       "Suela"
-    ]
+    ],
+    "foto": "imagenes/imperial-repujado-argentina--negro.jpg",
+    "fotosVariantes": {
+      "Negro": "imagenes/imperial-repujado-argentina--negro.jpg",
+      "Suela": "imagenes/imperial-repujado-argentina--suela.jpg"
+    }
   },
   {
     "id": 106,
@@ -1031,7 +1224,12 @@
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/imperial-liso-con-guarda-recortada-hojita--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/imperial-liso-con-guarda-recortada-hojita--borravino.jpg",
+      "Negro": "imagenes/imperial-liso-con-guarda-recortada-hojita--negro.jpg"
+    }
   },
   {
     "id": 107,
@@ -1039,8 +1237,9 @@
     "nombre": "Imperial Esquinero de Alpaca",
     "categoria": "Imperiales",
     "subcategoria": "Esquinero Alpaca",
-    "precio": 59900,
-    "variantes": []
+    "precio": 60000,
+    "variantes": [],
+    "foto": "imagenes/imperial-esquinero-de-alpaca.jpg"
   },
   {
     "id": 108,
@@ -1048,11 +1247,16 @@
     "nombre": "Imperial Botitas y Pelotas",
     "categoria": "Imperiales",
     "subcategoria": "Botitas Alpaca",
-    "precio": 59900,
+    "precio": 46000,
     "variantes": [
       "Negro",
       "Marron"
-    ]
+    ],
+    "foto": "imagenes/imperial-botitas-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Marron": "imagenes/imperial-botitas-y-pelotas--marron.jpg",
+      "Negro": "imagenes/imperial-botitas-y-pelotas--negro.jpg"
+    }
   },
   {
     "id": 109,
@@ -1067,7 +1271,14 @@
       "Blanco",
       "Suela",
       "Rosa"
-    ]
+    ],
+    "foto": "imagenes/imperial-interior-termico--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-interior-termico--marron.jpg",
+      "Negro": "imagenes/imperial-interior-termico--negro.jpg",
+      "Rosa": "imagenes/imperial-interior-termico--rosa.jpg",
+      "Suela": "imagenes/imperial-interior-termico--suela.jpg"
+    }
   },
   {
     "id": 110,
@@ -1079,7 +1290,12 @@
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/imperial-liso-con-virola-cincelada--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-liso-con-virola-cincelada--marron.jpg",
+      "Negro": "imagenes/imperial-liso-con-virola-cincelada--negro.jpg"
+    }
   },
   {
     "id": 111,
@@ -1088,7 +1304,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Guarda con Dije",
     "precio": 46900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-liso-azul-con-dije-de-boca.jpg"
   },
   {
     "id": 112,
@@ -1097,7 +1314,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Guarda con Dije",
     "precio": 48900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-liso-rojo-con-dije-de-river.jpg"
   },
   {
     "id": 113,
@@ -1106,7 +1324,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Guarda con Dije",
     "precio": 50900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-liso-negro-con-dije-de-afa.jpg"
   },
   {
     "id": 114,
@@ -1115,7 +1334,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Guarda con Dije",
     "precio": 54900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-liso-negro-con-dije-de-sol-argentino.jpg"
   },
   {
     "id": 115,
@@ -1124,7 +1344,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Guarda con Dije",
     "precio": 55900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-liso-negro-con-dije-de-boca.jpg"
   },
   {
     "id": 116,
@@ -1133,7 +1354,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Guarda con Dije",
     "precio": 55900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-liso-negro-con-dije-de-river.jpg"
   },
   {
     "id": 117,
@@ -1141,11 +1363,16 @@
     "nombre": "Imperial Repujado con Base Completa y Pelotas",
     "categoria": "Imperiales",
     "subcategoria": "Base Completa Alpaca y Pelotas Bronce",
-    "precio": 77900,
+    "precio": 65000,
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/imperial-repujado-con-base-completa-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-repujado-con-base-completa-y-pelotas--marron.jpg",
+      "Negro": "imagenes/imperial-repujado-con-base-completa-y-pelotas--negro.jpg"
+    }
   },
   {
     "id": 118,
@@ -1158,7 +1385,13 @@
       "Negro",
       "Rosa",
       "Marron"
-    ]
+    ],
+    "foto": "imagenes/imperial-croco-con-base-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Marron": "imagenes/imperial-croco-con-base-y-pelotas--marron.jpg",
+      "Negro": "imagenes/imperial-croco-con-base-y-pelotas--negro.jpg",
+      "Rosa": "imagenes/imperial-croco-con-base-y-pelotas--rosa.jpg"
+    }
   },
   {
     "id": 119,
@@ -1172,7 +1405,14 @@
       "Marrón",
       "Azul",
       "Rosa"
-    ]
+    ],
+    "foto": "imagenes/imperial-liso-con-base-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Azul": "imagenes/imperial-liso-con-base-y-pelotas--azul.jpg",
+      "Marrón": "imagenes/imperial-liso-con-base-y-pelotas--marron.jpg",
+      "Negro": "imagenes/imperial-liso-con-base-y-pelotas--negro.jpg",
+      "Rosa": "imagenes/imperial-liso-con-base-y-pelotas--rosa.jpg"
+    }
   },
   {
     "id": 120,
@@ -1184,7 +1424,12 @@
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/imperial-repujado-con-base-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-repujado-con-base-y-pelotas--marron.jpg",
+      "Negro": "imagenes/imperial-repujado-con-base-y-pelotas--negro.jpg"
+    }
   },
   {
     "id": 121,
@@ -1196,7 +1441,12 @@
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/imperial-croco-con-base-de-alpaca--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-croco-con-base-de-alpaca--marron.jpg",
+      "Negro": "imagenes/imperial-croco-con-base-de-alpaca--negro.jpg"
+    }
   },
   {
     "id": 122,
@@ -1208,7 +1458,12 @@
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/imperial-liso-con-base-de-alpaca--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-liso-con-base-de-alpaca--marron.jpg",
+      "Negro": "imagenes/imperial-liso-con-base-de-alpaca--negro.jpg"
+    }
   },
   {
     "id": 123,
@@ -1217,7 +1472,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Cuero Labrado Virola Alpaca",
     "precio": 42900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-gajos-pelota-con-guarda-de-alpaca.jpg"
   },
   {
     "id": 124,
@@ -1229,7 +1485,12 @@
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/imperial-repujado-con-guarda-de-alpaca--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/imperial-repujado-con-guarda-de-alpaca--borravino.jpg",
+      "Negro": "imagenes/imperial-repujado-con-guarda-de-alpaca--negro.jpg"
+    }
   },
   {
     "id": 125,
@@ -1242,7 +1503,13 @@
       "Negro",
       "Marrón",
       "Rosa"
-    ]
+    ],
+    "foto": "imagenes/imperial-croco-con-guarda-de-alpaca--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-croco-con-guarda-de-alpaca--marron.jpg",
+      "Negro": "imagenes/imperial-croco-con-guarda-de-alpaca--negro.jpg",
+      "Rosa": "imagenes/imperial-croco-con-guarda-de-alpaca--rosa.jpg"
+    }
   },
   {
     "id": 126,
@@ -1251,7 +1518,8 @@
     "categoria": "Imperiales",
     "subcategoria": "Avejentado/Amaderado",
     "precio": 50900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/imperial-avejentado-con-dije-de-sol.jpg"
   },
   {
     "id": 127,
@@ -1259,8 +1527,9 @@
     "nombre": "Imperial Cuero Crudo con Guarda de Alpaca",
     "categoria": "Imperiales",
     "subcategoria": "Cuero Liso Virola Alpaca",
-    "precio": 77900,
-    "variantes": []
+    "precio": 60000,
+    "variantes": [],
+    "foto": "imagenes/imperial-cuero-crudo-con-guarda-de-alpaca.jpg"
   },
   {
     "id": 128,
@@ -1272,7 +1541,12 @@
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/imperial-liso-con-virola-cincelada-invertida--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-liso-con-virola-cincelada-invertida--marron.jpg",
+      "Negro": "imagenes/imperial-liso-con-virola-cincelada-invertida--negro.jpg"
+    }
   },
   {
     "id": 129,
@@ -1284,7 +1558,12 @@
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/imperial-guarda-de-alpaca--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/imperial-guarda-de-alpaca--marron.jpg",
+      "Negro": "imagenes/imperial-guarda-de-alpaca--negro.jpg"
+    }
   },
   {
     "id": 130,
@@ -1293,7 +1572,8 @@
     "categoria": "Torpedos",
     "subcategoria": "Cuero Amaderado",
     "precio": 42900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/torpedo-color-amaderado-con-virola-cincelada-de-alpaca.jpg"
   },
   {
     "id": 131,
@@ -1301,8 +1581,9 @@
     "nombre": "Torpedo Uruguayo Cincelado al Lacre con Dije Sol",
     "categoria": "Torpedos",
     "subcategoria": "Uruguayo",
-    "precio": 88900,
-    "variantes": []
+    "precio": 70000,
+    "variantes": [],
+    "foto": "imagenes/torpedo-uruguayo-cincelado-al-lacre-con-dije-sol.jpg"
   },
   {
     "id": 132,
@@ -1310,7 +1591,7 @@
     "nombre": "Torpedo Repujado con Virola de Bronce",
     "categoria": "Torpedos",
     "subcategoria": "Cuero Repujado",
-    "precio": 48900,
+    "precio": 46000,
     "variantes": [
       "Negro",
       "Borravino",
@@ -1323,11 +1604,16 @@
     "nombre": "Torpedo Croco con Base y Pelotas",
     "categoria": "Torpedos",
     "subcategoria": "Cuero Crudo con Base",
-    "precio": 59900,
+    "precio": 55000,
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/torpedo-croco-con-base-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/torpedo-croco-con-base-y-pelotas--borravino.jpg",
+      "Negro": "imagenes/torpedo-croco-con-base-y-pelotas--negro.jpg"
+    }
   },
   {
     "id": 134,
@@ -1335,12 +1621,18 @@
     "nombre": "Torpedo Repujado con Base y Pelotas",
     "categoria": "Torpedos",
     "subcategoria": "Virola Cincelada Cuero Repujado Base y Pelotas",
-    "precio": 57900,
+    "precio": 55000,
     "variantes": [
       "Negro",
       "Borravino",
       "Natural"
-    ]
+    ],
+    "foto": "imagenes/torpedo-repujado-con-base-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/torpedo-repujado-con-base-y-pelotas--borravino.jpg",
+      "Natural": "imagenes/torpedo-repujado-con-base-y-pelotas--natural.jpg",
+      "Negro": "imagenes/torpedo-repujado-con-base-y-pelotas--negro.jpg"
+    }
   },
   {
     "id": 135,
@@ -1348,11 +1640,16 @@
     "nombre": "Torpedo Liso con Base y Pelotas",
     "categoria": "Torpedos",
     "subcategoria": "Virola Cincelada Cuero Liso Base y Pelotas",
-    "precio": 61900,
+    "precio": 53000,
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/torpedo-liso-con-base-y-pelotas--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/torpedo-liso-con-base-y-pelotas--marron.jpg",
+      "Negro": "imagenes/torpedo-liso-con-base-y-pelotas--negro.jpg"
+    }
   },
   {
     "id": 136,
@@ -1360,8 +1657,9 @@
     "nombre": "Torpedo Cuero Crudo Cincelado al Lacre con Base",
     "categoria": "Torpedos",
     "subcategoria": "Cuero Crudo con Base",
-    "precio": 88900,
-    "variantes": []
+    "precio": 75000,
+    "variantes": [],
+    "foto": "imagenes/torpedo-cuero-crudo-cincelado-al-lacre-con-base.jpg"
   },
   {
     "id": 137,
@@ -1370,7 +1668,8 @@
     "categoria": "Torpedos",
     "subcategoria": "Animal Print",
     "precio": 53900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/torpedo-animal-print-con-virola-de-alpaca-cincelada.jpg"
   },
   {
     "id": 138,
@@ -1378,11 +1677,16 @@
     "nombre": "Torpedo Gajos de Pelota con Base Completa",
     "categoria": "Torpedos",
     "subcategoria": "Guarda de Alpaca Cincelada Gajos de Pelota",
-    "precio": 59900,
+    "precio": 56000,
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/torpedo-gajos-de-pelota-con-base-completa--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/torpedo-gajos-de-pelota-con-base-completa--borravino.jpg",
+      "Negro": "imagenes/torpedo-gajos-de-pelota-con-base-completa--negro.jpg"
+    }
   },
   {
     "id": 139,
@@ -1391,7 +1695,8 @@
     "categoria": "Torpedos",
     "subcategoria": "Animal Print",
     "precio": 70900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/torpedo-animal-print-con-base-y-pelotas.jpg"
   },
   {
     "id": 140,
@@ -1399,8 +1704,9 @@
     "nombre": "Torpedo Vaquita con Virola de Alpaca Cincelada",
     "categoria": "Torpedos",
     "subcategoria": "Animal Print",
-    "precio": 57900,
-    "variantes": []
+    "precio": 50000,
+    "variantes": [],
+    "foto": "imagenes/torpedo-vaquita-con-virola-de-alpaca-cincelada.jpg"
   },
   {
     "id": 141,
@@ -1408,12 +1714,18 @@
     "nombre": "Torpedo Repujado con Virola y Base de Alpaca Cincelada",
     "categoria": "Torpedos",
     "subcategoria": "Guarda de Alpaca Cincelada Cuero Repujado Base Alpaca",
-    "precio": 55900,
+    "precio": 52000,
     "variantes": [
       "Natural",
       "Borravino",
       "Negro"
-    ]
+    ],
+    "foto": "imagenes/torpedo-repujado-con-virola-y-base-de-alpaca-cincelada--natural.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/torpedo-repujado-con-virola-y-base-de-alpaca-cincelada--borravino.jpg",
+      "Natural": "imagenes/torpedo-repujado-con-virola-y-base-de-alpaca-cincelada--natural.jpg",
+      "Negro": "imagenes/torpedo-repujado-con-virola-y-base-de-alpaca-cincelada--negro.jpg"
+    }
   },
   {
     "id": 142,
@@ -1421,8 +1733,9 @@
     "nombre": "Torpedo Uruguayo Cincelado al Lacre",
     "categoria": "Torpedos",
     "subcategoria": "Uruguayo",
-    "precio": 77900,
-    "variantes": []
+    "precio": 60000,
+    "variantes": [],
+    "foto": "imagenes/torpedo-uruguayo-cincelado-al-lacre.jpg"
   },
   {
     "id": 143,
@@ -1430,11 +1743,16 @@
     "nombre": "Torpedo Repujado con Virola de Alpaca Calada",
     "categoria": "Torpedos",
     "subcategoria": "Guarda de Alpaca Calada",
-    "precio": 66900,
+    "precio": 62000,
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/torpedo-repujado-con-virola-de-alpaca-calada--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/torpedo-repujado-con-virola-de-alpaca-calada--borravino.jpg",
+      "Negro": "imagenes/torpedo-repujado-con-virola-de-alpaca-calada--negro.jpg"
+    }
   },
   {
     "id": 144,
@@ -1442,11 +1760,16 @@
     "nombre": "Torpedo Liso con Virola de Alpaca Cincelada",
     "categoria": "Torpedos",
     "subcategoria": "Guarda de Alpaca Cincelada",
-    "precio": 36900,
+    "precio": 34000,
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/torpedo-liso-con-virola-de-alpaca-cincelada--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/torpedo-liso-con-virola-de-alpaca-cincelada--marron.jpg",
+      "Negro": "imagenes/torpedo-liso-con-virola-de-alpaca-cincelada--negro.jpg"
+    }
   },
   {
     "id": 145,
@@ -1454,11 +1777,16 @@
     "nombre": "Torpedo con Virola de Acero",
     "categoria": "Torpedos",
     "subcategoria": "Guarda de Acero",
-    "precio": 28900,
+    "precio": 28000,
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/torpedo-con-virola-de-acero--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/torpedo-con-virola-de-acero--borravino.jpg",
+      "Negro": "imagenes/torpedo-con-virola-de-acero--negro.jpg"
+    }
   },
   {
     "id": 146,
@@ -1466,12 +1794,18 @@
     "nombre": "Torpedo Premium Argentina",
     "categoria": "Torpedos",
     "subcategoria": "Argentina",
-    "precio": 154900,
+    "precio": 100000,
     "variantes": [
       "AFA",
       "Sol",
       "Sol con Doble Aro"
-    ]
+    ],
+    "foto": "imagenes/torpedo-premium-argentina--afa.jpg",
+    "fotosVariantes": {
+      "AFA": "imagenes/torpedo-premium-argentina--afa.jpg",
+      "Sol con Doble Aro": "imagenes/torpedo-premium-argentina--sol-con-doble-aro.jpg",
+      "Sol": "imagenes/torpedo-premium-argentina--sol.jpg"
+    }
   },
   {
     "id": 147,
@@ -1479,12 +1813,18 @@
     "nombre": "Criollo Imperial",
     "categoria": "Criollos",
     "subcategoria": "",
-    "precio": 53900,
+    "precio": 52000,
     "variantes": [
       "Negro",
       "Suela",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/criollo-imperial--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/criollo-imperial--borravino.jpg",
+      "Negro": "imagenes/criollo-imperial--negro.jpg",
+      "Suela": "imagenes/criollo-imperial--suela.jpg"
+    }
   },
   {
     "id": 148,
@@ -1493,7 +1833,8 @@
     "categoria": "Criollos",
     "subcategoria": "",
     "precio": 17900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/criollo-camionero-con-base-con-pelo.jpg"
   },
   {
     "id": 149,
@@ -1501,11 +1842,16 @@
     "nombre": "Criollo Torpedo",
     "categoria": "Criollos",
     "subcategoria": "",
-    "precio": 53900,
+    "precio": 48000,
     "variantes": [
       "Negro",
       "Borravino"
-    ]
+    ],
+    "foto": "imagenes/criollo-torpedo--negro.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/criollo-torpedo--borravino.jpg",
+      "Negro": "imagenes/criollo-torpedo--negro.jpg"
+    }
   },
   {
     "id": 150,
@@ -1514,7 +1860,8 @@
     "categoria": "Criollos",
     "subcategoria": "",
     "precio": 28900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/criollo-galleta.jpg"
   },
   {
     "id": 151,
@@ -1523,7 +1870,8 @@
     "categoria": "Criollos",
     "subcategoria": "",
     "precio": 17900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/criollo-coquito.jpg"
   },
   {
     "id": 152,
@@ -1531,8 +1879,9 @@
     "nombre": "Criollo Camionero con Virola Acero",
     "categoria": "Criollos",
     "subcategoria": "",
-    "precio": 28900,
-    "variantes": []
+    "precio": 35900,
+    "variantes": [],
+    "foto": "imagenes/criollo-camionero-con-virola-acero.jpg"
   },
   {
     "id": 153,
@@ -1540,11 +1889,16 @@
     "nombre": "Camionero Liso con Virola de Acero",
     "categoria": "Camioneros",
     "subcategoria": "Virola Alpaca",
-    "precio": 28900,
+    "precio": 28000,
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/camionero-liso-con-virola-de-acero--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/camionero-liso-con-virola-de-acero--marron.jpg",
+      "Negro": "imagenes/camionero-liso-con-virola-de-acero--negro.jpg"
+    }
   },
   {
     "id": 154,
@@ -1556,7 +1910,12 @@
     "variantes": [
       "Negro",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/camionero-liso-con-virola-cincelada--negro.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/camionero-liso-con-virola-cincelada--marron.jpg",
+      "Negro": "imagenes/camionero-liso-con-virola-cincelada--negro.jpg"
+    }
   },
   {
     "id": 155,
@@ -1564,10 +1923,14 @@
     "nombre": "Camionero Liso con Virola Cincelada Invertida",
     "categoria": "Camioneros",
     "subcategoria": "Virola de Acero",
-    "precio": 35900,
+    "precio": 35000,
     "variantes": [
       "Negro"
-    ]
+    ],
+    "foto": "imagenes/camionero-liso-con-virola-cincelada-invertida--negro.jpg",
+    "fotosVariantes": {
+      "Negro": "imagenes/camionero-liso-con-virola-cincelada-invertida--negro.jpg"
+    }
   },
   {
     "id": 156,
@@ -1576,7 +1939,8 @@
     "categoria": "Materas",
     "subcategoria": "Bolsos Materos",
     "precio": 22900,
-    "variantes": []
+    "variantes": [],
+    "foto": "imagenes/juego-bolso-matero-yerbero-azucarero-cuerina.jpg"
   },
   {
     "id": 157,
@@ -1588,7 +1952,12 @@
     "variantes": [
       "Negro/Suela",
       "Verde/Suela"
-    ]
+    ],
+    "foto": "imagenes/juego-bolso-matero-yerbero-azucarero-tela-cuerina--negro-suela.jpg",
+    "fotosVariantes": {
+      "Negro/Suela": "imagenes/juego-bolso-matero-yerbero-azucarero-tela-cuerina--negro-suela.jpg",
+      "Verde/Suela": "imagenes/juego-bolso-matero-yerbero-azucarero-tela-cuerina--verde-suela.jpg"
+    }
   },
   {
     "id": 158,
@@ -1600,7 +1969,12 @@
     "variantes": [
       "Negro",
       "Rosa"
-    ]
+    ],
+    "foto": "imagenes/juego-bolso-matero-yerbero-azucarero-tela--negro.jpg",
+    "fotosVariantes": {
+      "Negro": "imagenes/juego-bolso-matero-yerbero-azucarero-tela--negro.jpg",
+      "Rosa": "imagenes/juego-bolso-matero-yerbero-azucarero-tela--rosa.jpg"
+    }
   },
   {
     "id": 159,
@@ -1608,8 +1982,9 @@
     "nombre": "Media Matera con Manija Costura al Tiento Variado",
     "categoria": "Materas",
     "subcategoria": "Media Canasta Premium",
-    "precio": 89900,
-    "variantes": []
+    "precio": 65000,
+    "variantes": [],
+    "foto": "imagenes/media-matera-con-manija-costura-al-tiento-variado.jpg"
   },
   {
     "id": 160,
@@ -1617,11 +1992,16 @@
     "nombre": "Matera Cuerina con Diseño",
     "categoria": "Materas",
     "subcategoria": "100% Cuero Gajos",
-    "precio": 21900,
+    "precio": 21000,
     "variantes": [
       "Croco",
       "Gajos Pelota"
-    ]
+    ],
+    "foto": "imagenes/matera-cuerina-con-diseno--croco.jpg",
+    "fotosVariantes": {
+      "Gajos Pelota": "imagenes/matera-cuerina-con-diseno--gajos-pelota.jpg",
+      "Croco": "imagenes/matera-cuerina-con-diseno--croco.jpg"
+    }
   },
   {
     "id": 161,
@@ -1629,11 +2009,16 @@
     "nombre": "Matera Cuerina Lisa con Mango Rigido",
     "categoria": "Materas",
     "subcategoria": "Cuerina Mango Rigido",
-    "precio": 15900,
+    "precio": 15000,
     "variantes": [
       "Negra",
       "Marrón"
-    ]
+    ],
+    "foto": "imagenes/matera-cuerina-lisa-con-mango-rigido--negra.jpg",
+    "fotosVariantes": {
+      "Marrón": "imagenes/matera-cuerina-lisa-con-mango-rigido--marron.jpg",
+      "Negra": "imagenes/matera-cuerina-lisa-con-mango-rigido--negra.jpg"
+    }
   },
   {
     "id": 162,
@@ -1647,7 +2032,14 @@
       "Marrón",
       "Borravino",
       "Suela"
-    ]
+    ],
+    "foto": "imagenes/media-matera-100-cuero-lisa--negra.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/media-matera-100-cuero-lisa--borravino.jpg",
+      "Marrón": "imagenes/media-matera-100-cuero-lisa--marron.jpg",
+      "Negra": "imagenes/media-matera-100-cuero-lisa--negra.jpg",
+      "Suela": "imagenes/media-matera-100-cuero-lisa--suela.jpg"
+    }
   },
   {
     "id": 163,
@@ -1655,8 +2047,9 @@
     "nombre": "Matera 100% Cuero Celeste Argentina con Gajos Pelota",
     "categoria": "Materas",
     "subcategoria": "100% Cuero Gajos",
-    "precio": 67900,
-    "variantes": []
+    "precio": 55000,
+    "variantes": [],
+    "foto": "imagenes/matera-100-cuero-celeste-argentina-con-gajos-pelota.jpg"
   },
   {
     "id": 164,
@@ -1664,13 +2057,20 @@
     "nombre": "Matera Cuerina Lisa",
     "categoria": "Materas",
     "subcategoria": "100% Cuero Lisa",
-    "precio": 18900,
+    "precio": 19000,
     "variantes": [
       "Negra",
       "Chocolate",
       "Rosa",
       "Cinnamon"
-    ]
+    ],
+    "foto": "imagenes/matera-cuerina-lisa--negra.jpg",
+    "fotosVariantes": {
+      "Chocolate": "imagenes/matera-cuerina-lisa--chocolate.jpg",
+      "Cinnamon": "imagenes/matera-cuerina-lisa--cinnamon.jpg",
+      "Negra": "imagenes/matera-cuerina-lisa--negra.jpg",
+      "Rosa": "imagenes/matera-cuerina-lisa--rosa.jpg"
+    }
   },
   {
     "id": 165,
@@ -1678,8 +2078,9 @@
     "nombre": "Matera 100% Cuero Azul/Suela con Gajos Pelota de Boca",
     "categoria": "Materas",
     "subcategoria": "100% Cuero Gajos",
-    "precio": 56900,
-    "variantes": []
+    "precio": 55000,
+    "variantes": [],
+    "foto": "imagenes/matera-100-cuero-azul-suela-con-gajos-pelota-de-boca.jpg"
   },
   {
     "id": 166,
@@ -1687,12 +2088,18 @@
     "nombre": "Matera 100% Cuero con Gajos Pelota",
     "categoria": "Materas",
     "subcategoria": "100% Cuero Gajos",
-    "precio": 49900,
+    "precio": 48000,
     "variantes": [
       "AFA",
       "River",
       "Boca"
-    ]
+    ],
+    "foto": "imagenes/matera-100-cuero-con-gajos-pelota--afa.jpg",
+    "fotosVariantes": {
+      "AFA": "imagenes/matera-100-cuero-con-gajos-pelota--afa.jpg",
+      "Boca": "imagenes/matera-100-cuero-con-gajos-pelota--boca.jpg",
+      "River": "imagenes/matera-100-cuero-con-gajos-pelota--river.jpg"
+    }
   },
   {
     "id": 167,
@@ -1700,12 +2107,107 @@
     "nombre": "Matera 100% Cuero Lisa",
     "categoria": "Materas",
     "subcategoria": "100% Cuero Lisa",
-    "precio": 45900,
+    "precio": 45000,
     "variantes": [
       "Negra",
       "Marrón",
       "Borravino",
       "Cinnamon"
+    ],
+    "foto": "imagenes/matera-100-cuero-lisa--negra.jpg",
+    "fotosVariantes": {
+      "Borravino": "imagenes/matera-100-cuero-lisa--borravino.jpg",
+      "Cinnamon": "imagenes/matera-100-cuero-lisa--cinnamon.jpg",
+      "Marrón": "imagenes/matera-100-cuero-lisa--marron.jpg",
+      "Negra": "imagenes/matera-100-cuero-lisa--negra.jpg"
+    }
+  },
+  {
+    "id": 168,
+    "slug": "grabado-personalizado",
+    "nombre": "Grabado Personalizado",
+    "categoria": "Grabados",
+    "subcategoria": "Personalizado",
+    "precio": 10900,
+    "variantes": [
+      "Cursiva",
+      "Formal",
+      "Informal"
+    ],
+    "foto": "imagenes/grabado-personalizado--cursiva.jpg",
+    "fotosVariantes": {
+      "Cursiva": "imagenes/grabado-personalizado--cursiva.jpg",
+      "Formal": "imagenes/grabado-personalizado--formal.jpg",
+      "Informal": "imagenes/grabado-personalizado--informal.jpg"
+    }
+  },
+  {
+    "id": 169,
+    "slug": "grabado-predeterminado",
+    "nombre": "Grabado Predeterminado",
+    "categoria": "Grabados",
+    "subcategoria": "Predeterminado",
+    "precio": 6900,
+    "variantes": [],
+    "foto": "imagenes/grabados/pred-001.jpg",
+    "galeria": [
+      "imagenes/grabados/pred-001.jpg",
+      "imagenes/grabados/pred-002.jpg",
+      "imagenes/grabados/pred-003.jpg",
+      "imagenes/grabados/pred-004.jpg",
+      "imagenes/grabados/pred-005.jpg",
+      "imagenes/grabados/pred-006.jpg",
+      "imagenes/grabados/pred-007.jpg",
+      "imagenes/grabados/pred-008.jpg",
+      "imagenes/grabados/pred-009.jpg",
+      "imagenes/grabados/pred-010.jpg",
+      "imagenes/grabados/pred-011.jpg",
+      "imagenes/grabados/pred-012.jpg",
+      "imagenes/grabados/pred-013.jpg",
+      "imagenes/grabados/pred-014.jpg",
+      "imagenes/grabados/pred-015.jpg",
+      "imagenes/grabados/pred-016.jpg",
+      "imagenes/grabados/pred-017.jpg",
+      "imagenes/grabados/pred-018.jpg",
+      "imagenes/grabados/pred-019.jpg",
+      "imagenes/grabados/pred-020.jpg",
+      "imagenes/grabados/pred-021.jpg",
+      "imagenes/grabados/pred-022.jpg",
+      "imagenes/grabados/pred-023.jpg",
+      "imagenes/grabados/pred-024.jpg",
+      "imagenes/grabados/pred-025.jpg",
+      "imagenes/grabados/pred-026.jpg",
+      "imagenes/grabados/pred-027.jpg",
+      "imagenes/grabados/pred-028.jpg",
+      "imagenes/grabados/pred-029.jpg",
+      "imagenes/grabados/pred-030.jpg",
+      "imagenes/grabados/pred-031.jpg",
+      "imagenes/grabados/pred-032.jpg",
+      "imagenes/grabados/pred-033.jpg",
+      "imagenes/grabados/pred-034.jpg",
+      "imagenes/grabados/pred-035.jpg",
+      "imagenes/grabados/pred-036.jpg",
+      "imagenes/grabados/pred-037.jpg",
+      "imagenes/grabados/pred-038.jpg",
+      "imagenes/grabados/pred-039.jpg",
+      "imagenes/grabados/pred-040.jpg",
+      "imagenes/grabados/pred-041.jpg",
+      "imagenes/grabados/pred-042.jpg",
+      "imagenes/grabados/pred-043.jpg",
+      "imagenes/grabados/pred-044.jpg",
+      "imagenes/grabados/pred-045.jpg",
+      "imagenes/grabados/pred-046.jpg",
+      "imagenes/grabados/pred-047.jpg",
+      "imagenes/grabados/pred-048.jpg",
+      "imagenes/grabados/pred-049.jpg",
+      "imagenes/grabados/pred-050.jpg",
+      "imagenes/grabados/pred-051.jpg",
+      "imagenes/grabados/pred-052.jpg",
+      "imagenes/grabados/pred-053.jpg",
+      "imagenes/grabados/pred-054.jpg",
+      "imagenes/grabados/pred-055.jpg",
+      "imagenes/grabados/pred-056.jpg",
+      "imagenes/grabados/pred-057.jpg"
     ]
   }
 ]

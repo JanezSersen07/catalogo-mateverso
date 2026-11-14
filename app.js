@@ -74,31 +74,54 @@ function formatearPrecio(numero) {
   });
 }
 
+// ---------- Armar el link de WhatsApp (con la variante elegida, si hay) ----------
+function armarLink(producto, variante) {
+  const detalle = variante ? ` (${variante})` : "";
+  const consulta = encodeURIComponent(
+    `Hola Mateverso! Quiero consultar por: ${producto.nombre}${detalle}`
+  );
+  return `https://wa.me/${WHATSAPP}?text=${consulta}`;
+}
+
+// ---------- Armar el <img> de una foto (si no existe, se borra y queda el emoji) ----------
+function crearImagen(ruta, texto) {
+  return `<img src="${ruta}" alt="${texto}" loading="lazy" onerror="this.remove()">`;
+}
+
 // ---------- Armar el HTML de una tarjeta ----------
 function crearTarjeta(producto) {
-  const consulta = encodeURIComponent(
-    `Hola Mateverso! Quiero consultar por: ${producto.nombre}`
-  );
-  const link = `https://wa.me/${WHATSAPP}?text=${consulta}`;
+  const fotosVariantes = producto.fotosVariantes || {};
 
+  // Si la variante tiene foto propia, el chip es un botón que cambia la imagen
   const variantes = producto.variantes
-    .map((variante) => `<span>${variante}</span>`)
+    .map((variante) => {
+      if (fotosVariantes[variante]) {
+        return `<button type="button" class="chip" data-variante="${variante}">${variante}</button>`;
+      }
+      return `<span class="chip">${variante}</span>`;
+    })
     .join("");
 
-  // Si la foto no existe, onerror la borra y queda el emoji de fondo
+  // Los productos con galería muestran un botón para ver los ejemplos
+  const botonGaleria = producto.galeria
+    ? `<button type="button" class="boton-galeria" data-galeria="${producto.slug}">
+         Ver ${producto.galeria.length} ejemplos
+       </button>`
+    : "";
+
   return `
-    <article class="tarjeta">
+    <article class="tarjeta" data-slug="${producto.slug}">
       <div class="imagen">
         <span aria-hidden="true">🧉</span>
-        <img src="imagenes/${producto.slug}.jpg" alt="${producto.nombre}"
-             loading="lazy" onerror="this.remove()">
+        ${crearImagen(producto.foto || `imagenes/${producto.slug}.jpg`, producto.nombre)}
       </div>
       <div class="info">
         <span class="categoria">${producto.subcategoria || producto.categoria}</span>
         <h2>${producto.nombre}</h2>
         <div class="variantes">${variantes}</div>
+        ${botonGaleria}
         <p class="precio">${formatearPrecio(producto.precio)}</p>
-        <a class="boton" href="${link}" target="_blank" rel="noopener noreferrer">
+        <a class="boton" href="${armarLink(producto)}" target="_blank" rel="noopener noreferrer">
           Consultar por WhatsApp
         </a>
       </div>
@@ -124,6 +147,54 @@ function mostrarProductos() {
     mensaje.hidden = true;
   }
 }
+
+// ---------- Elegir una variante: cambia la foto y el mensaje de WhatsApp ----------
+catalogo.addEventListener("click", (evento) => {
+  const chip = evento.target.closest("button.chip");
+  const botonGaleria = evento.target.closest("button.boton-galeria");
+
+  if (chip) {
+    const tarjeta = chip.closest(".tarjeta");
+    const producto = productos.find((p) => p.slug === tarjeta.dataset.slug);
+    const variante = chip.dataset.variante;
+
+    tarjeta.querySelector(".imagen").innerHTML =
+      `<span aria-hidden="true">🧉</span>` +
+      crearImagen(producto.fotosVariantes[variante], `${producto.nombre} - ${variante}`);
+
+    tarjeta.querySelectorAll("button.chip").forEach((otro) => {
+      otro.classList.toggle("activo", otro === chip);
+    });
+    tarjeta.querySelector(".boton").href = armarLink(producto, variante);
+  }
+
+  if (botonGaleria) {
+    abrirGaleria(productos.find((p) => p.slug === botonGaleria.dataset.galeria));
+  }
+});
+
+// ---------- Galería de ejemplos (ventana <dialog>) ----------
+const dialogo = document.getElementById("galeria");
+const galeriaTitulo = document.getElementById("galeria-titulo");
+const galeriaFotos = document.getElementById("galeria-fotos");
+
+function abrirGaleria(producto) {
+  galeriaTitulo.textContent = `${producto.nombre} - ejemplos`;
+  galeriaFotos.innerHTML = producto.galeria
+    .map((ruta, i) => crearImagen(ruta, `Ejemplo de grabado ${i + 1}`))
+    .join("");
+  dialogo.showModal();
+}
+
+document.getElementById("galeria-cerrar").addEventListener("click", () => dialogo.close());
+
+// Click en el fondo oscuro también cierra
+dialogo.addEventListener("click", (evento) => {
+  if (evento.target === dialogo) {
+    dialogo.close();
+  }
+});
+
 
 // ---------- Eventos: se vuelve a filtrar cada vez que el usuario cambia algo ----------
 buscador.addEventListener("input", mostrarProductos);

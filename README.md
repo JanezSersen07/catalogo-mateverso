@@ -16,13 +16,6 @@ Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y fi
 - Botón de consulta por WhatsApp con el nombre del producto ya escrito en el mensaje.
 - Diseño adaptable a celular y escritorio (CSS Grid).
 
-## Estado del proyecto
-
-Prototipo funcional. Próximos pasos:
-- Cargar las fotos de todos los productos
-- Agregar ordenamiento por precio
-- Conectar los datos a una base de datos en lugar de un archivo JSON
-- 
 ## Conceptos de JavaScript que practiqué
 
 - `fetch` + `async/await` + manejo de errores con `try/catch`
@@ -50,3 +43,23 @@ Como la página usa `fetch`, hay que abrirla desde un servidor local (no alcanza
 ## Autor
 
 Janez · Estudiante de la Tecnicatura Universitaria en Programación (UTN Haedo)
+
+
+## Fotos de los productos
+
+Cada producto muestra su foto desde `imagenes/`. Los campos nuevos de `productos.json`:
+
+- `foto`: foto principal de la tarjeta.
+- `fotosVariantes`: foto por variante (color, diseño). Esas variantes se ven como botones: al tocarlas cambia la imagen y el mensaje de WhatsApp incluye la variante elegida.
+- `galeria`: lista de fotos de ejemplo (la usa "Grabado Predeterminado", con el botón "Ver ejemplos").
+
+Si una foto no existe, la tarjeta muestra el emoji de mate en su lugar.
+
+### Preparar las fotos
+
+Las fotos originales son pesadas, así que `preparar-fotos.ps1` las copia y achica (máx. 900 px, JPG) con los nombres que usa el catálogo, según `plan-fotos.csv`. Los originales no se modifican.
+
+```powershell
+.\preparar-fotos.ps1 -Origen "C:\ruta\a\PRODUCTOS" -Prueba   # prueba con 3 fotos
+.\preparar-fotos.ps1 -Origen "C:\ruta\a\PRODUCTOS"           # todas
+```

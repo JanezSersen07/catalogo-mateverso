@@ -165,12 +165,94 @@ body {
   gap: 6px;
 }
 
-.variantes span {
+.chip {
   padding: 3px 8px;
+  font-family: inherit;
   font-size: 0.75rem;
   color: var(--verde-oscuro);
   background-color: var(--verde-claro);
+  border: 1px solid transparent;
   border-radius: 999px;
+}
+
+/* Las variantes con foto son botones */
+button.chip {
+  cursor: pointer;
+  border-color: var(--verde);
+}
+
+button.chip:hover,
+button.chip:focus-visible {
+  background-color: #d3dbc0;
+}
+
+button.chip.activo {
+  color: #ffffff;
+  background-color: var(--verde);
+}
+
+.boton-galeria {
+  padding: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  background-color: var(--verde-claro);
+  border: 2px solid var(--verde);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.boton-galeria:hover,
+.boton-galeria:focus-visible {
+  background-color: #d3dbc0;
+}
+
+/* Galería de ejemplos */
+.galeria {
+  width: min(900px, 94vw);
+  max-height: 90vh;
+  margin: auto;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background-color: var(--crema);
+}
+
+.galeria::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.galeria-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: var(--verde-oscuro);
+}
+
+.galeria-cerrar {
+  padding: 6px 12px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: var(--verde);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.galeria-fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.galeria-fotos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: var(--verde-claro);
 }
 
 .boton {
