@@ -73,3 +73,14 @@ Mateverso trabaja por encargo, así que el catálogo permite armar un pedido y e
 - El pedido se guarda en el navegador (`localStorage`), así que no se pierde si se cierra la página.
 - Los precios se leen de `productos.json` cada vez, por lo que si cambian, el pedido se actualiza solo.
 - El pedido no cobra ni controla stock: es un mensaje armado. El pago, la disponibilidad y el día de retiro se coordinan por WhatsApp.
+
+## Diseño
+
+- Paleta basada en la marca: verde yerba profundo, papel crema y un acento bronce (como las bombillas de alpaca/bronce).
+- La franja de rombos debajo de la portada es una guarda tradicional dibujada con CSS (un SVG embebido).
+- Los filtros quedan fijos arriba al hacer scroll; las categorías son botones que se deslizan en celular.
+- Grilla de 2 columnas en celular y de 4 en pantallas grandes; mientras cargan los productos se ven tarjetas de espera.
+- El pedido aparece como hoja desde abajo en celular. Respeta `prefers-reduced-motion` y tiene foco visible para navegar con teclado.
+- Tipografías: Bricolage Grotesque (títulos y precios) y DM Sans (texto), desde Google Fonts.
+
+La carpeta `logo/` tiene el logo de Mateverso en versión clara (para fondos oscuros) y verde (para fondos claros), el ícono solo y el favicon. Se generaron a partir del logo original, quitándole el fondo de papel para que tengan transparencia.

@@ -3,54 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catálogo de productos de Mateverso con buscador y filtros por categoría, hecho con HTML, CSS y JavaScript.">
+  <meta name="description" content="Catálogo de Mateverso: mates, bombillas, termos y yerbas. Armá tu pedido y coordinamos el retiro por WhatsApp.">
+  <meta name="theme-color" content="#243516">
   <title>Catálogo Mateverso</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="apple-touch-icon" href="logo/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Sans:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="encabezado">
-    <h1>Catálogo Mateverso</h1>
-    <p>El universo del mate. Buscá y filtrá los productos.</p>
-    <p class="encargo">Trabajamos por encargo: armá tu pedido y coordinamos el día de retiro por WhatsApp.</p>
+  <header class="portada">
+    <div class="portada-contenido">
+      <div class="marca">
+        <img class="marca-icono" src="logo/icono-claro.png" alt="" width="243" height="292">
+        <h1>Catálogo Mateverso</h1>
+      </div>
+      <p class="lema">Mates, bombillas, termos y yerbas.</p>
+      <p class="encargo">Trabajamos por encargo: armás tu pedido y coordinamos el día de retiro por WhatsApp.</p>
+    </div>
+    <div class="greca" aria-hidden="true"></div>
   </header>
 
+  <section class="filtros" aria-label="Filtros del catálogo">
+    <div class="filtros-contenido">
+      <div class="busqueda">
+        <label for="buscador" class="solo-lectores">Buscar productos</label>
+        <input type="search" id="buscador" placeholder="Buscá un mate, una bombilla, un termo...">
+      </div>
+      <div id="categorias" class="categorias" role="group" aria-label="Categorías"></div>
+    </div>
+  </section>
+
   <main class="contenedor">
-    <section class="filtros" aria-label="Filtros del catálogo">
-      <div class="campo">
-        <label for="buscador">Buscar</label>
-        <input type="search" id="buscador" placeholder="Ej: imperial, bombilla, termo...">
-      </div>
-
-      <div class="campo">
-        <label for="categoria">Categoría</label>
-        <select id="categoria">
-          <option value="todas">Todas</option>
-        </select>
-      </div>
-    </section>
-
     <p id="contador" class="contador" aria-live="polite"></p>
 
-    <section id="catalogo" class="grilla" aria-label="Productos"></section>
+    <section id="catalogo" class="grilla" aria-label="Productos" aria-busy="true">
+      <div class="esqueleto"></div><div class="esqueleto"></div><div class="esqueleto"></div><div class="esqueleto"></div>
+      <div class="esqueleto"></div><div class="esqueleto"></div><div class="esqueleto"></div><div class="esqueleto"></div>
+    </section>
 
     <p id="mensaje" class="mensaje" hidden></p>
   </main>
 
   <footer class="pie">
-    <p>Proyecto de portfolio · Los precios pueden no estar actualizados, consultá siempre por WhatsApp</p>
+    <img class="pie-logo" src="logo/logo-verde.png" alt="Mateverso, el universo del mate" width="422" height="417">
+    <p>Trabajamos por encargo. Los precios pueden cambiar: te confirmamos todo por WhatsApp antes de cerrar el pedido.</p>
+    <p class="pie-aparte">Proyecto de portfolio, hecho con HTML, CSS y JavaScript.</p>
   </footer>
 
   <button type="button" id="boton-pedido" class="boton-pedido" hidden>
-    Mi pedido <span id="cantidad-pedido" class="cantidad-pedido">0</span>
+    <span>Mi pedido <span id="cantidad-pedido" class="cantidad-pedido">0</span></span>
+    <span id="total-boton" class="total-boton"></span>
   </button>
 
-  <dialog id="pedido" class="galeria pedido" aria-labelledby="pedido-titulo">
-    <div class="galeria-cabecera">
+  <dialog id="pedido" class="ventana pedido" aria-labelledby="pedido-titulo">
+    <div class="ventana-cabecera">
       <h2 id="pedido-titulo">Mi pedido</h2>
-      <button type="button" id="pedido-cerrar" class="galeria-cerrar" aria-label="Cerrar">✕</button>
+      <button type="button" id="pedido-cerrar" class="ventana-cerrar" aria-label="Cerrar">✕</button>
     </div>
     <ul id="pedido-lista" class="pedido-lista"></ul>
-    <p class="pedido-total">Total estimado: <strong id="pedido-total"></strong></p>
+    <p class="pedido-total">Total estimado <strong id="pedido-total"></strong></p>
     <p class="pedido-nota">Trabajamos por encargo. Al enviar el pedido por WhatsApp te confirmamos precios, disponibilidad y el día de retiro.</p>
     <div class="pedido-acciones">
       <a id="pedido-enviar" class="boton" href="#" target="_blank" rel="noopener noreferrer">Enviar pedido por WhatsApp</a>
@@ -58,10 +72,10 @@
     </div>
   </dialog>
 
-  <dialog id="galeria" class="galeria" aria-labelledby="galeria-titulo">
-    <div class="galeria-cabecera">
+  <dialog id="galeria" class="ventana galeria" aria-labelledby="galeria-titulo">
+    <div class="ventana-cabecera">
       <h2 id="galeria-titulo"></h2>
-      <button type="button" id="galeria-cerrar" class="galeria-cerrar" aria-label="Cerrar">✕</button>
+      <button type="button" id="galeria-cerrar" class="ventana-cerrar" aria-label="Cerrar">✕</button>
     </div>
     <div id="galeria-fotos" class="galeria-fotos"></div>
   </dialog>

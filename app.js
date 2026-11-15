@@ -1,7 +1,7 @@
 // ---------- Referencias al HTML ----------
 const catalogo = document.getElementById("catalogo");
 const buscador = document.getElementById("buscador");
-const selectCategoria = document.getElementById("categoria");
+const contenedorCategorias = document.getElementById("categorias");
 const contador = document.getElementById("contador");
 const mensaje = document.getElementById("mensaje");
 
@@ -11,6 +11,7 @@ const WHATSAPP = "5492944671384";
 const CLAVE_PEDIDO = "pedidoMateverso";
 
 let productos = []; // se llena cuando carga el JSON
+let categoriaActiva = "todas"; // categoría elegida en los botones
 let seleccion = {}; // variante elegida en cada tarjeta: { slug: "Negro" }
 let pedido = leerPedido(); // [{ slug, variante, cantidad }]
 
@@ -29,6 +30,8 @@ async function cargarProductos() {
     mostrarPedido();
   } catch (error) {
     console.error(error);
+    catalogo.innerHTML = "";
+    catalogo.removeAttribute("aria-busy");
     contador.textContent = "";
     mensaje.hidden = false;
     mensaje.textContent =
@@ -36,7 +39,7 @@ async function cargarProductos() {
   }
 }
 
-// ---------- Armar las opciones del select (con reduce) ----------
+// ---------- Armar los botones de categoría (con reduce) ----------
 function cargarCategorias() {
   const categorias = productos.reduce((lista, producto) => {
     if (!lista.includes(producto.categoria)) {
@@ -45,17 +48,19 @@ function cargarCategorias() {
     return lista;
   }, []);
 
-  const opciones = categorias.map((categoria) => {
-    return `<option value="${categoria}">${categoria}</option>`;
+  const botones = ["todas", ...categorias].map((categoria) => {
+    const texto = categoria === "todas" ? "Todas" : categoria;
+    const activo = categoria === categoriaActiva;
+    return `<button type="button" class="categoria-boton" data-categoria="${categoria}" aria-pressed="${activo}">${texto}</button>`;
   });
 
-  selectCategoria.innerHTML += opciones.join("");
+  contenedorCategorias.innerHTML = botones.join("");
 }
 
 // ---------- Filtrar según lo que eligió el usuario (con filter) ----------
 function filtrarProductos() {
   const texto = buscador.value.trim().toLowerCase();
-  const categoria = selectCategoria.value;
+  const categoria = categoriaActiva;
 
   return productos.filter((producto) => {
     const coincideTexto =
@@ -142,6 +147,7 @@ function mostrarProductos() {
   const filtrados = filtrarProductos();
 
   catalogo.innerHTML = filtrados.map(crearTarjeta).join("");
+  catalogo.removeAttribute("aria-busy");
 
   contador.textContent =
     filtrados.length === 1
@@ -215,6 +221,7 @@ function calcularTotal(detalle) {
 // ---------- Referencias del pedido ----------
 const botonPedido = document.getElementById("boton-pedido");
 const cantidadPedido = document.getElementById("cantidad-pedido");
+const totalBoton = document.getElementById("total-boton");
 const dialogoPedido = document.getElementById("pedido");
 const listaPedido = document.getElementById("pedido-lista");
 const totalPedido = document.getElementById("pedido-total");
@@ -227,6 +234,7 @@ function mostrarPedido() {
   const unidades = detalle.reduce((suma, item) => suma + item.cantidad, 0);
 
   cantidadPedido.textContent = unidades;
+  totalBoton.textContent = formatearPrecio(calcularTotal(detalle));
   botonPedido.hidden = unidades === 0 && !dialogoPedido.open;
 
   if (detalle.length === 0) {
@@ -416,7 +424,16 @@ dialogo.addEventListener("click", (evento) => {
 
 // ---------- Eventos: se vuelve a filtrar cada vez que el usuario cambia algo ----------
 buscador.addEventListener("input", mostrarProductos);
-selectCategoria.addEventListener("change", mostrarProductos);
+contenedorCategorias.addEventListener("click", (evento) => {
+  const boton = evento.target.closest("button.categoria-boton");
+  if (!boton) return;
+
+  categoriaActiva = boton.dataset.categoria;
+  contenedorCategorias.querySelectorAll("button").forEach((otro) => {
+    otro.setAttribute("aria-pressed", otro === boton);
+  });
+  mostrarProductos();
+});
 
 // ---------- Arranque ----------
 cargarProductos();
