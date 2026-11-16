@@ -84,3 +84,9 @@ Mateverso trabaja por encargo, así que el catálogo permite armar un pedido y e
 - Tipografías: Bricolage Grotesque (títulos y precios) y DM Sans (texto), desde Google Fonts.
 
 La carpeta `logo/` tiene el logo de Mateverso en versión clara (para fondos oscuros) y verde (para fondos claros), el ícono solo y el favicon. Se generaron a partir del logo original, quitándole el fondo de papel para que tengan transparencia.
+
+## Link directo a un producto
+
+Cada tarjeta tiene un botón "Copiar link". El link tiene la forma `…/catalogo-mateverso/?producto=slug` (y `&variante=Negro` si había una variante elegida). Al abrirlo, el catálogo muestra solo ese producto, con un botón "Ver todo el catálogo". Si el producto ya no existe, avisa y muestra el catálogo completo.
+
+Se usa el campo `slug` de `productos.json`, así que no hay que cargar nada nuevo. Si cambiás el `slug` de un producto, los links que ya compartiste con el slug viejo dejan de apuntar a él.

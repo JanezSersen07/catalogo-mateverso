@@ -363,6 +363,61 @@ input {
   width: 100%;
 }
 
+.acciones-secundarias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 14px;
+}
+
+.boton-copiar {
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--gris);
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.boton-copiar:hover {
+  color: var(--verde-profundo);
+}
+
+.producto-unico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  background-color: var(--verde-claro);
+  border-radius: 12px;
+  color: var(--verde-profundo);
+}
+
+.producto-unico[hidden] {
+  display: none;
+}
+
+.ver-todo {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--verde);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ver-todo:hover {
+  background-color: var(--verde-profundo);
+}
+
 .enlace-consulta {
   text-align: center;
   font-size: 0.85rem;

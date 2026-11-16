@@ -4,6 +4,9 @@ const buscador = document.getElementById("buscador");
 const contenedorCategorias = document.getElementById("categorias");
 const contador = document.getElementById("contador");
 const mensaje = document.getElementById("mensaje");
+const bannerProducto = document.getElementById("producto-unico");
+const textoBanner = document.getElementById("producto-unico-texto");
+const botonVerTodo = document.getElementById("ver-todo");
 
 // ---------- Datos ----------
 const URL_PRODUCTOS = "productos.json";
@@ -13,6 +16,8 @@ const CLAVE_PEDIDO = "pedidoMateverso";
 let productos = []; // se llena cuando carga el JSON
 let categoriaActiva = "todas"; // categoría elegida en los botones
 let seleccion = {}; // variante elegida en cada tarjeta: { slug: "Negro" }
+let productoUnico = ""; // slug del producto que viene en el link (?producto=...)
+let avisoLink = ""; // aviso si el producto del link ya no existe
 let pedido = leerPedido(); // [{ slug, variante, cantidad }]
 
 // ---------- Cargar los productos con fetch ----------
@@ -25,6 +30,7 @@ async function cargarProductos() {
     }
 
     productos = await respuesta.json();
+    leerProductoDeLaUrl();
     cargarCategorias();
     mostrarProductos();
     mostrarPedido();
@@ -59,6 +65,11 @@ function cargarCategorias() {
 
 // ---------- Filtrar según lo que eligió el usuario (con filter) ----------
 function filtrarProductos() {
+  // Si el link trae un producto puntual, solo se muestra ese
+  if (productoUnico) {
+    return productos.filter((producto) => producto.slug === productoUnico);
+  }
+
   const texto = buscador.value.trim().toLowerCase();
   const categoria = categoriaActiva;
 
@@ -134,9 +145,12 @@ function crearTarjeta(producto) {
         <button type="button" class="boton boton-agregar" data-agregar="${producto.slug}">
           Agregar al pedido
         </button>
-        <a class="enlace-consulta" href="${armarLink(producto, elegida)}" target="_blank" rel="noopener noreferrer">
-          Consultar por WhatsApp
-        </a>
+        <div class="acciones-secundarias">
+          <a class="enlace-consulta" href="${armarLink(producto, elegida)}" target="_blank" rel="noopener noreferrer">
+            Consultar por WhatsApp
+          </a>
+          <button type="button" class="boton-copiar" data-copiar="${producto.slug}">Copiar link</button>
+        </div>
       </div>
     </article>
   `;
@@ -145,6 +159,7 @@ function crearTarjeta(producto) {
 // ---------- Mostrar en pantalla (con map) ----------
 function mostrarProductos() {
   const filtrados = filtrarProductos();
+  mostrarBanner();
 
   catalogo.innerHTML = filtrados.map(crearTarjeta).join("");
   catalogo.removeAttribute("aria-busy");
@@ -161,6 +176,87 @@ function mostrarProductos() {
     mensaje.hidden = true;
   }
 }
+
+// =====================================================
+//  LINK DIRECTO A UN PRODUCTO
+// =====================================================
+
+// ---------- Leer el link: ?producto=slug&variante=Negro ----------
+function leerProductoDeLaUrl() {
+  const parametros = new URLSearchParams(window.location.search);
+  const slug = parametros.get("producto");
+  if (!slug) return;
+
+  const producto = productos.find((p) => p.slug === slug);
+
+  if (!producto) {
+    avisoLink = "Ese producto ya no está en el catálogo. Mirá el resto de los productos.";
+    return;
+  }
+
+  productoUnico = slug;
+
+  const variante = parametros.get("variante");
+  if (variante && producto.variantes.includes(variante)) {
+    seleccion[slug] = variante;
+  }
+}
+
+// ---------- Armar el link directo de un producto ----------
+function armarLinkProducto(slug) {
+  const url = new URL(window.location.href);
+  url.search = "";
+  url.hash = "";
+  url.searchParams.set("producto", slug);
+
+  if (seleccion[slug]) {
+    url.searchParams.set("variante", seleccion[slug]);
+  }
+  return url.toString();
+}
+
+// ---------- Copiar el link al portapapeles ----------
+async function copiarLink(url, boton) {
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch (error) {
+    // Si el navegador no deja copiar solo, se muestra el link para copiarlo a mano
+    window.prompt("Copiá este link:", url);
+    return;
+  }
+
+  boton.textContent = "Link copiado ✓";
+  setTimeout(() => (boton.textContent = "Copiar link"), 1500);
+}
+
+// ---------- Cartel de arriba: "Estás viendo un producto" ----------
+function mostrarBanner() {
+  if (productoUnico) {
+    textoBanner.textContent = "Estás viendo un producto puntual.";
+    botonVerTodo.hidden = false;
+    bannerProducto.hidden = false;
+  } else if (avisoLink) {
+    textoBanner.textContent = avisoLink;
+    botonVerTodo.hidden = true;
+    bannerProducto.hidden = false;
+  } else {
+    bannerProducto.hidden = true;
+  }
+}
+
+// ---------- Volver al catálogo completo ----------
+function salirDeProductoUnico() {
+  if (!productoUnico && !avisoLink) return;
+
+  productoUnico = "";
+  avisoLink = "";
+  window.history.replaceState(null, "", window.location.pathname);
+}
+
+botonVerTodo.addEventListener("click", () => {
+  salirDeProductoUnico();
+  mostrarProductos();
+});
 
 // =====================================================
 //  PEDIDO (carrito): se guarda en el navegador
@@ -354,6 +450,11 @@ catalogo.addEventListener("click", (evento) => {
   const chip = evento.target.closest("button.chip");
   const botonAgregar = evento.target.closest("button.boton-agregar");
   const botonGaleria = evento.target.closest("button.boton-galeria");
+  const botonCopiar = evento.target.closest("button.boton-copiar");
+
+  if (botonCopiar) {
+    copiarLink(armarLinkProducto(botonCopiar.dataset.copiar), botonCopiar);
+  }
 
   // Elegir una variante: cambia la foto (si tiene) y el mensaje de consulta
   if (chip) {
@@ -423,11 +524,15 @@ dialogo.addEventListener("click", (evento) => {
 });
 
 // ---------- Eventos: se vuelve a filtrar cada vez que el usuario cambia algo ----------
-buscador.addEventListener("input", mostrarProductos);
+buscador.addEventListener("input", () => {
+  salirDeProductoUnico();
+  mostrarProductos();
+});
 contenedorCategorias.addEventListener("click", (evento) => {
   const boton = evento.target.closest("button.categoria-boton");
   if (!boton) return;
 
+  salirDeProductoUnico();
   categoriaActiva = boton.dataset.categoria;
   contenedorCategorias.querySelectorAll("button").forEach((otro) => {
     otro.setAttribute("aria-pressed", otro === boton);
