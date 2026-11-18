@@ -73,7 +73,7 @@ function filtrarProductos() {
   const texto = buscador.value.trim().toLowerCase();
   const categoria = categoriaActiva;
 
-  return productos.filter((producto) => {
+  const filtrados = productos.filter((producto) => {
     const coincideTexto =
       producto.nombre.toLowerCase().includes(texto) ||
       producto.subcategoria.toLowerCase().includes(texto) ||
@@ -83,6 +83,9 @@ function filtrarProductos() {
 
     return coincideTexto && coincideCategoria;
   });
+
+  // Los productos agotados van al final (sort es estable: el resto mantiene su orden)
+  return filtrados.sort((a, b) => Number(Boolean(a.agotado)) - Number(Boolean(b.agotado)));
 }
 
 // ---------- Dar formato de precio argentino ----------
@@ -99,6 +102,15 @@ function armarLink(producto, variante) {
   const detalle = variante ? ` (${variante})` : "";
   const consulta = encodeURIComponent(
     `Hola Mateverso! Quiero consultar por: ${producto.nombre}${detalle}`
+  );
+  return `https://wa.me/${WHATSAPP}?text=${consulta}`;
+}
+
+// ---------- Consulta de stock para un producto agotado ----------
+function armarLinkStock(producto, variante) {
+  const detalle = variante ? ` (${variante})` : "";
+  const consulta = encodeURIComponent(
+    `Hola Mateverso! Quería saber si va a volver a haber: ${producto.nombre}${detalle}`
   );
   return `https://wa.me/${WHATSAPP}?text=${consulta}`;
 }
@@ -129,11 +141,32 @@ function crearTarjeta(producto) {
        </button>`
     : "";
 
+  const agotado = producto.agotado === true;
+
+  // Producto agotado: no se agrega al pedido, se puede consultar si va a volver
+  const acciones = agotado
+    ? `<a class="boton boton-stock enlace-stock" href="${armarLinkStock(producto, elegida)}" target="_blank" rel="noopener noreferrer">
+         Consultar si vuelve
+       </a>
+       <div class="acciones-secundarias">
+         <button type="button" class="boton-copiar" data-copiar="${producto.slug}">Copiar link</button>
+       </div>`
+    : `<button type="button" class="boton boton-agregar" data-agregar="${producto.slug}">
+         Agregar al pedido
+       </button>
+       <div class="acciones-secundarias">
+         <a class="enlace-consulta" href="${armarLink(producto, elegida)}" target="_blank" rel="noopener noreferrer">
+           Consultar por WhatsApp
+         </a>
+         <button type="button" class="boton-copiar" data-copiar="${producto.slug}">Copiar link</button>
+       </div>`;
+
   return `
-    <article class="tarjeta" data-slug="${producto.slug}">
+    <article class="tarjeta${agotado ? " agotado" : ""}" data-slug="${producto.slug}">
       <div class="imagen">
         <span aria-hidden="true">🧉</span>
         ${crearImagen(foto, producto.nombre)}
+        ${agotado ? `<span class="etiqueta-agotado">Agotado</span>` : ""}
       </div>
       <div class="info">
         <span class="categoria">${producto.subcategoria || producto.categoria}</span>
@@ -142,15 +175,7 @@ function crearTarjeta(producto) {
         ${botonGaleria}
         <p class="precio">${formatearPrecio(producto.precio)}</p>
         <p class="aviso" role="alert" hidden></p>
-        <button type="button" class="boton boton-agregar" data-agregar="${producto.slug}">
-          Agregar al pedido
-        </button>
-        <div class="acciones-secundarias">
-          <a class="enlace-consulta" href="${armarLink(producto, elegida)}" target="_blank" rel="noopener noreferrer">
-            Consultar por WhatsApp
-          </a>
-          <button type="button" class="boton-copiar" data-copiar="${producto.slug}">Copiar link</button>
-        </div>
+        ${acciones}
       </div>
     </article>
   `;
@@ -302,7 +327,8 @@ function detallarPedido() {
   return pedido
     .map((item) => {
       const producto = productos.find((p) => p.slug === item.slug);
-      return producto ? { ...item, producto: producto } : null;
+      // Si un producto se agotó o ya no existe, se ignora en el pedido
+      return producto && !producto.agotado ? { ...item, producto: producto } : null;
     })
     .filter((item) => item !== null);
 }
@@ -382,7 +408,7 @@ function armarLinkPedido(detalle) {
     "",
     `Total estimado: ${formatearPrecio(calcularTotal(detalle))}`,
     "",
-    "¿Qué día de retiro tenés disponible?",
+    "¿Cómo coordinamos la entrega?",
   ].join("\n");
 
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`;
@@ -468,14 +494,18 @@ catalogo.addEventListener("click", (evento) => {
     if (fotosVariantes[variante]) {
       tarjeta.querySelector(".imagen").innerHTML =
         `<span aria-hidden="true">🧉</span>` +
-        crearImagen(fotosVariantes[variante], `${producto.nombre} - ${variante}`);
+        crearImagen(fotosVariantes[variante], `${producto.nombre} - ${variante}`) +
+        (producto.agotado ? `<span class="etiqueta-agotado">Agotado</span>` : "");
     }
 
     tarjeta.querySelectorAll("button.chip").forEach((otro) => {
       otro.classList.toggle("activo", otro === chip);
     });
     tarjeta.querySelector(".aviso").hidden = true;
-    tarjeta.querySelector(".enlace-consulta").href = armarLink(producto, variante);
+    const enlaceConsulta = tarjeta.querySelector(".enlace-consulta");
+    const enlaceStock = tarjeta.querySelector(".enlace-stock");
+    if (enlaceConsulta) enlaceConsulta.href = armarLink(producto, variante);
+    if (enlaceStock) enlaceStock.href = armarLinkStock(producto, variante);
   }
 
   // Agregar al pedido: si tiene variantes, hay que elegir una antes

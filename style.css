@@ -429,6 +429,40 @@ input {
   color: var(--verde-profundo);
 }
 
+/* Producto agotado */
+.tarjeta.agotado .imagen img {
+  opacity: 0.45;
+  filter: grayscale(0.8);
+}
+
+.etiqueta-agotado {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--verde-profundo);
+  border-radius: 999px;
+}
+
+.tarjeta.agotado .precio {
+  color: var(--gris);
+}
+
+.boton-stock {
+  color: var(--verde-profundo);
+  background-color: transparent;
+  border: 1.5px solid var(--verde);
+}
+
+.boton-stock:hover {
+  color: var(--verde-profundo);
+  background-color: var(--verde-claro);
+}
+
 /* Cargando */
 .esqueleto {
   aspect-ratio: 3 / 4;
@@ -454,6 +488,84 @@ input {
   color: var(--gris);
 }
 
+/* ---------- Preguntas frecuentes ---------- */
+.preguntas {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px 32px;
+}
+
+.preguntas h2 {
+  margin-bottom: 14px;
+  font-family: var(--fuente-titulo);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--verde-profundo);
+}
+
+.preguntas-lista {
+  max-width: 720px;
+  border-top: 1px solid var(--linea);
+}
+
+.pregunta {
+  border-bottom: 1px solid var(--linea);
+}
+
+.pregunta summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 2px;
+  font-weight: 700;
+  color: var(--verde-profundo);
+  cursor: pointer;
+  list-style: none;
+}
+
+.pregunta summary::-webkit-details-marker {
+  display: none;
+}
+
+.pregunta summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--bronce);
+}
+
+.pregunta[open] summary::after {
+  content: "−";
+}
+
+.pregunta summary:focus-visible {
+  outline: 2px solid var(--bronce);
+  outline-offset: 2px;
+}
+
+.pregunta-respuesta {
+  padding: 0 2px 18px;
+  color: var(--tinta);
+}
+
+.pregunta-respuesta p + p,
+.pregunta-respuesta ul {
+  margin-top: 8px;
+}
+
+.pregunta-respuesta ul {
+  padding-left: 20px;
+}
+
+.enlace-preguntas {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
 /* ---------- Pie ---------- */
 .pie {
   max-width: 1100px;
@@ -469,6 +581,39 @@ input {
   width: 110px;
   height: auto;
   margin-bottom: 14px;
+}
+
+.redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.red {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--verde-profundo);
+  background-color: var(--verde-claro);
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.red span {
+  font-weight: 400;
+  color: var(--gris);
+}
+
+.red:hover {
+  border-color: var(--yerba);
+}
+
+.red:focus-visible {
+  outline: 2px solid var(--bronce);
+  outline-offset: 2px;
 }
 
 .pie-aparte {

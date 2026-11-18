@@ -69,10 +69,10 @@ Mateverso trabaja por encargo, así que el catálogo permite armar un pedido y e
 
 - Cada tarjeta tiene "Agregar al pedido". Si el producto tiene variantes (color, diseño), hay que elegir una antes.
 - El botón flotante "Mi pedido" abre el detalle: se puede sumar, restar o quitar productos, y muestra el total estimado.
-- "Enviar pedido por WhatsApp" abre el chat con el mensaje armado (productos, variantes, cantidades, total y la consulta por el día de retiro).
+- "Enviar pedido por WhatsApp" abre el chat con el mensaje armado (productos, variantes, cantidades, total y la consulta por cómo coordinar la entrega).
 - El pedido se guarda en el navegador (`localStorage`), así que no se pierde si se cierra la página.
 - Los precios se leen de `productos.json` cada vez, por lo que si cambian, el pedido se actualiza solo.
-- El pedido no cobra ni controla stock: es un mensaje armado. El pago, la disponibilidad y el día de retiro se coordinan por WhatsApp.
+- El pedido no cobra ni controla stock: es un mensaje armado. El pago, la disponibilidad y la entrega se coordinan por WhatsApp.
 
 ## Diseño
 
@@ -90,3 +90,11 @@ La carpeta `logo/` tiene el logo de Mateverso en versión clara (para fondos osc
 Cada tarjeta tiene un botón "Copiar link". El link tiene la forma `…/catalogo-mateverso/?producto=slug` (y `&variante=Negro` si había una variante elegida). Al abrirlo, el catálogo muestra solo ese producto, con un botón "Ver todo el catálogo". Si el producto ya no existe, avisa y muestra el catálogo completo.
 
 Se usa el campo `slug` de `productos.json`, así que no hay que cargar nada nuevo. Si cambiás el `slug` de un producto, los links que ya compartiste con el slug viejo dejan de apuntar a él.
+
+## Productos agotados
+
+Un producto con `"agotado": true` en `productos.json` se muestra atenuado, con la etiqueta "Agotado", al final de la lista. No se puede agregar al pedido: en su lugar tiene "Consultar si vuelve", que abre WhatsApp. Los productos agotados también se descartan del pedido guardado.
+
+## Preguntas frecuentes
+
+Al final de la página hay un bloque de preguntas frecuentes (cómo pedir, pago y seña, tiempos, envíos, grabados, cambios y atención), armado con `<details>` y `<summary>`: se abre y se cierra sin JavaScript, y funciona con teclado. El texto está en `index.html`.

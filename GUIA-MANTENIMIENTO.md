@@ -105,6 +105,26 @@ Las variantes que no estén en `fotosVariantes` se ven como etiqueta, sin botón
 
 ---
 
+## 3c. Marcar un producto como agotado
+
+No hace falta borrarlo. En el bloque del producto agregá `"agotado": true` (con coma en la línea anterior):
+
+```json
+"precio": 15000,
+"agotado": true,
+"foto": "imagenes/yerba-nueva-1kg.jpg"
+```
+
+Qué pasa en la página:
+
+- La tarjeta se ve atenuada, con la etiqueta "Agotado", y pasa al final de la lista.
+- No se puede agregar al pedido. En su lugar aparece "Consultar si vuelve", que abre WhatsApp con el producto (y la variante elegida).
+- Si alguien ya lo tenía en su pedido, deja de contarse.
+
+Cuando vuelve a haber stock, borrá esa línea (o poné `false`) y subí el cambio.
+
+---
+
 ## 4. Errores típicos del JSON
 
 - **Falta una coma** entre bloques, o **sobra** una después del último. Es el error más común.

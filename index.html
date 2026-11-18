@@ -3,7 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catálogo de Mateverso: mates, bombillas, termos y yerbas. Armá tu pedido y coordinamos el retiro por WhatsApp.">
+  <meta name="description" content="Catálogo de Mateverso: mates, bombillas, termos y yerbas. Armá tu pedido y coordinamos la entrega por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Mateverso">
+  <meta property="og:title" content="Catálogo Mateverso">
+  <meta property="og:description" content="Mates, bombillas, termos y yerbas. Armá tu pedido y lo coordinamos por WhatsApp.">
+  <meta property="og:url" content="https://janezsersen07.github.io/catalogo-mateverso/">
+  <meta property="og:image" content="https://janezsersen07.github.io/catalogo-mateverso/logo/vista-previa.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#243516">
   <title>Catálogo Mateverso</title>
   <link rel="icon" type="image/png" href="logo/favicon.png">
@@ -11,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Sans:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <header class="portada">
@@ -21,7 +31,7 @@
         <h1>Catálogo Mateverso</h1>
       </div>
       <p class="lema">Mates, bombillas, termos y yerbas.</p>
-      <p class="encargo">Trabajamos por encargo: armás tu pedido y coordinamos el día de retiro por WhatsApp.</p>
+      <p class="encargo">Trabajamos por encargo: armás tu pedido y coordinamos la entrega por WhatsApp. <a class="enlace-preguntas" href="#preguntas">Preguntas frecuentes</a></p>
     </div>
     <div class="greca" aria-hidden="true"></div>
   </header>
@@ -52,8 +62,67 @@
     <p id="mensaje" class="mensaje" hidden></p>
   </main>
 
+  <section id="preguntas" class="preguntas" aria-labelledby="preguntas-titulo">
+    <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
+    <div class="preguntas-lista">
+      <details class="pregunta">
+        <summary>¿Cómo hago un pedido?</summary>
+        <div class="pregunta-respuesta">
+          <p>Agregá los productos a "Mi pedido" y tocá "Enviar pedido por WhatsApp". Te respondemos para confirmar disponibilidad, total y cómo coordinamos la entrega.</p>
+        </div>
+      </details>
+      <details class="pregunta">
+        <summary>¿Cómo se paga?</summary>
+        <div class="pregunta-respuesta">
+          <p>Aceptamos transferencia, desde cualquier billetera o banco virtual, y efectivo.</p>
+          <p>Como trabajamos por encargo, pedimos una seña del 50% del total del pedido.</p>
+        </div>
+      </details>
+      <details class="pregunta">
+        <summary>¿Cuánto tarda mi pedido?</summary>
+        <div class="pregunta-respuesta">
+          <p>Como máximo una semana. Retiramos la mercadería generalmente los jueves, aunque el día puede variar. Tu pedido queda listo esa misma tarde-noche o al día siguiente, según el día en que lo confirmes.</p>
+        </div>
+      </details>
+      <details class="pregunta">
+        <summary>¿Hacen envíos?</summary>
+        <div class="pregunta-respuesta">
+          <p>Somos de Ciudad Evita. El envío a Ciudad Evita, Aldo Bonzi y Tablada cuesta $3.000.</p>
+          <p>Para zonas más alejadas enviamos por Correo Argentino. El costo depende de dónde vivas, te lo confirmamos por WhatsApp y se suma al precio del pedido.</p>
+        </div>
+      </details>
+      <details class="pregunta">
+        <summary>¿Cómo pido un grabado?</summary>
+        <div class="pregunta-respuesta">
+          <p>Agregá el grabado a tu pedido desde la categoría Grabados.</p>
+          <ul>
+            <li><strong>Personalizado:</strong> mandanos por WhatsApp fotos de ejemplo, textos, frases, iniciales, escudos de fútbol o signos.</li>
+            <li><strong>Predeterminado:</strong> lo hablamos por WhatsApp y te pasamos las opciones, que son las mismas de las fotos de ejemplo.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="pregunta">
+        <summary>¿Puedo cambiar o devolver un producto?</summary>
+        <div class="pregunta-respuesta">
+          <p>Solo si el producto tiene una falla de nuestra parte: en ese caso nos hacemos cargo y lo cambiamos. Tenés 1 o 2 semanas para pedir el cambio. Si no hay falla, no hay cambios ni devoluciones.</p>
+        </div>
+      </details>
+      <details class="pregunta">
+        <summary>¿En qué horario atienden?</summary>
+        <div class="pregunta-respuesta">
+          <p>Atendemos por WhatsApp todos los días, a cualquier hora.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
   <footer class="pie">
     <img class="pie-logo" src="logo/logo-verde.png" alt="Mateverso, el universo del mate" width="422" height="417">
+    <nav class="redes" aria-label="Redes de Mateverso">
+      <a class="red" href="https://www.instagram.com/mateversoo_/" target="_blank" rel="noopener noreferrer">Instagram <span>@mateversoo_</span></a>
+      <a class="red" href="https://www.tiktok.com/@mateversoo_" target="_blank" rel="noopener noreferrer">TikTok <span>@mateversoo_</span></a>
+      <a class="red" href="https://wa.me/5492944671384" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </nav>
     <p>Trabajamos por encargo. Los precios pueden cambiar: te confirmamos todo por WhatsApp antes de cerrar el pedido.</p>
     <p class="pie-aparte">Proyecto de portfolio, hecho con HTML, CSS y JavaScript.</p>
   </footer>
@@ -70,7 +139,7 @@
     </div>
     <ul id="pedido-lista" class="pedido-lista"></ul>
     <p class="pedido-total">Total estimado <strong id="pedido-total"></strong></p>
-    <p class="pedido-nota">Trabajamos por encargo. Al enviar el pedido por WhatsApp te confirmamos precios, disponibilidad y el día de retiro.</p>
+    <p class="pedido-nota">Trabajamos por encargo. Al enviar el pedido por WhatsApp te confirmamos precios, disponibilidad y la entrega. El envío no está incluido en el total.</p>
     <div class="pedido-acciones">
       <a id="pedido-enviar" class="boton" href="#" target="_blank" rel="noopener noreferrer">Enviar pedido por WhatsApp</a>
       <button type="button" id="pedido-vaciar" class="pedido-vaciar">Vaciar pedido</button>
@@ -85,6 +154,6 @@
     <div id="galeria-fotos" class="galeria-fotos"></div>
   </dialog>
 
-  <script src="app.js?v=4"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>
