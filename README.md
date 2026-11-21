@@ -1,8 +1,23 @@
 # Catálogo Mateverso
 
-Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y filtro por categoría. Hecho con **HTML, CSS y JavaScript** (sin librerías). Muestra más de 160 productos reales.
+Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y filtro por categoría. Hecho con **HTML, CSS y JavaScript** (sin librerías). Muestra más de 180 productos reales y arma el pedido por WhatsApp.
 
 🔗 **Ver online:** https://janezsersen07.github.io/catalogo-mateverso/
+
+![Catálogo Mateverso](captura-catalogo.png)
+
+<details>
+<summary>Más capturas</summary>
+
+La sección **Verano**, que reúne los productos de temporada:
+
+![Sección Verano](captura-verano.png)
+
+En el celular:
+
+<img src="captura-catalogo-movil.png" alt="Catálogo en el celular" width="320">
+
+</details>
 
 ## Qué hace
 
