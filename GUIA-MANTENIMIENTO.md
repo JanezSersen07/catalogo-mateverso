@@ -46,8 +46,33 @@ Las fotos de ese producto pueden quedar en `imagenes/`; no molestan. Si querés 
 
 ### Paso A: la foto
 
-1. Achicá la foto a unos 900 px de lado y guardala como JPG (podés usar el script `preparar-fotos.ps1` o cualquier editor).
+**Tamaño de la foto:** no hace falta una medida exacta. La página muestra la foto entera sobre fondo blanco, sin deformarla ni recortarla, así que cualquier proporción entra (cuadrada, vertical u horizontal). Lo único que importa es el peso: una foto del celular pesa varios MB y hace lenta la página, por eso se achica a unos 900 px de lado y se guarda como JPG. Las cuadradas con fondo claro son las que mejor se ven.
+
+1. Achicá la foto a unos 900 px de lado y guardala como JPG. Podés hacerlo con cualquier editor, o con el script (ver más abajo).
 2. Ponele el nombre del `slug` del producto y guardala en la carpeta `imagenes/`. El `slug` es el nombre en minúsculas, sin tildes ni símbolos y con guiones. Ejemplo: `yerba-nueva-1kg.jpg`.
+
+### Achicar varias fotos nuevas con el script
+
+Sirve para preparar muchas fotos de una vez (por ejemplo, los productos de verano):
+
+1. Creá un archivo de texto `fotos-nuevas.csv` en la carpeta del repo, con este formato (separado por punto y coma, la primera línea es fija):
+
+```
+archivo;destino
+IMG_1234.jpg;imagenes/mate-verano-1.jpg
+IMG_1235.jpg;imagenes/bombilla-verano-1.jpg
+```
+
+   `archivo` es el nombre de la foto original (el script la busca en todas las subcarpetas de la carpeta de origen) y `destino` es el nombre final con el `slug`.
+
+2. En PowerShell, dentro de la carpeta del repo:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\preparar-fotos.ps1 -Origen "C:\Users\janez\Pictures\EMPRENDIMIENTO\PRODUCTOS" -Plan ".\fotos-nuevas.csv"
+```
+
+3. Las fotos achicadas quedan en `imagenes/`. Las originales no se tocan. Si alguna no se encuentra, el script la lista al final.
 
 ### Paso B: el bloque en el JSON
 
@@ -70,7 +95,7 @@ Qué significa cada campo:
 
 | Campo | Qué poner |
 |---|---|
-| `id` | Un número que no se repita. Usá el siguiente al más alto que haya (ahora el último es 169). |
+| `id` | Un número que no se repita. Usá el siguiente al más alto que haya (ahora el último es 180). |
 | `slug` | Nombre en minúsculas, sin tildes, con guiones. Tiene que ser único. |
 | `nombre` | El nombre que se ve en la tarjeta. |
 | `categoria` | Una categoría que ya exista, escrita igual (ej: `Yerbas`, `Bombillas`). Si escribís una nueva, aparece sola en el filtro. |
@@ -93,6 +118,18 @@ Agregá `fotosVariantes`, con una foto por variante. Al tocar el botón de esa v
 ```
 
 Las variantes que no estén en `fotosVariantes` se ven como etiqueta, sin botón.
+
+### Productos de la sección Verano
+
+Para que un producto aparezca también en la sección **Verano** (además de en su categoría), agregá `"verano": true` en su bloque:
+
+```json
+"precio": 6000,
+"verano": true,
+"foto": "imagenes/yerba-nueva.jpg"
+```
+
+El botón "Verano" aparece solo mientras haya algún producto con ese campo. Cuando termine la temporada, borrá esa línea de los productos (o ponele `false`) y el botón desaparece.
 
 ---
 

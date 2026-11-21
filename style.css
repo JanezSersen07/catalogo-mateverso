@@ -186,6 +186,10 @@ input {
   border-color: var(--verde);
 }
 
+.categoria-boton[data-categoria="Verano"]:not([aria-pressed="true"]) {
+  border-color: var(--bronce);
+}
+
 .categoria-boton[aria-pressed="true"] {
   color: #ffffff;
   background-color: var(--verde);

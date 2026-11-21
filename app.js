@@ -54,7 +54,11 @@ function cargarCategorias() {
     return lista;
   }, []);
 
-  const botones = ["todas", ...categorias].map((categoria) => {
+  // Si algún producto tiene "verano": true, aparece una sección Verano con todos ellos
+  const hayVerano = productos.some((producto) => producto.verano === true);
+  const lista = hayVerano ? ["todas", "Verano", ...categorias] : ["todas", ...categorias];
+
+  const botones = lista.map((categoria) => {
     const texto = categoria === "todas" ? "Todas" : categoria;
     const activo = categoria === categoriaActiva;
     return `<button type="button" class="categoria-boton" data-categoria="${categoria}" aria-pressed="${activo}">${texto}</button>`;
@@ -79,7 +83,9 @@ function filtrarProductos() {
       producto.subcategoria.toLowerCase().includes(texto) ||
       producto.variantes.join(" ").toLowerCase().includes(texto);
     const coincideCategoria =
-      categoria === "todas" || producto.categoria === categoria;
+      categoria === "todas" ||
+      producto.categoria === categoria ||
+      (categoria === "Verano" && producto.verano === true);
 
     return coincideTexto && coincideCategoria;
   });

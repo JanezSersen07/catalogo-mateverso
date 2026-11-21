@@ -98,3 +98,7 @@ Un producto con `"agotado": true` en `productos.json` se muestra atenuado, con l
 ## Preguntas frecuentes
 
 Al final de la página hay un bloque de preguntas frecuentes (cómo pedir, pago y seña, tiempos, envíos, grabados, cambios y atención), armado con `<details>` y `<summary>`: se abre y se cierra sin JavaScript, y funciona con teclado. El texto está en `index.html`.
+
+## Sección Verano
+
+Un producto con `"verano": true` en `productos.json` aparece también en el botón **Verano**, además de en su categoría. Si ningún producto tiene ese campo, el botón no se muestra.
