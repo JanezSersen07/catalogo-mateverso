@@ -102,6 +102,12 @@ El catálogo carga los productos con JavaScript, lo que a los buscadores les cue
 
 Las páginas se generan en cada publicación a partir de `productos.json`, así que **no hay que hacer nada a mano**: agregar, cambiar o borrar productos sigue siendo editar un solo archivo. `404.html` redirige al catálogo los links de productos que ya no existen.
 
+## Ordenar, "Más pedidos" y consultas rápidas
+
+- **Ordenar por precio** (menor o mayor); los agotados siempre van al final.
+- **Más pedidos:** los productos con `"popular": true` en `productos.json` muestran una etiqueta y se pueden ver todos juntos con un filtro propio.
+- **Botón de consultas** fijo por WhatsApp, que sube solo cuando aparece el botón "Mi pedido" para no taparlo.
+
 ## Productos agotados
 
 Un producto con `"agotado": true` en `productos.json` se muestra atenuado, con la etiqueta "Agotado", al final de la lista. No se puede agregar al pedido: en su lugar tiene "Consultar si vuelve", que abre WhatsApp. Los productos agotados también se descartan del pedido guardado.

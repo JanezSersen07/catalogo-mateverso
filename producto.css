@@ -36,6 +36,7 @@ a { color: inherit; }
 .insignias { display: flex; gap: 8px; margin-bottom: 8px; }
 .insignia { font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
 .insignia.agotado { background: #f3dede; color: #7a2323; }
+.insignia.popular { background: #f1e3c8; color: #7a5413; }
 .insignia.verano { background: var(--verde-claro); color: var(--verde); }
 h1 { font-family: var(--fuente-titulo); font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.15; color: var(--verde-profundo); }
 .precio { font-family: var(--fuente-titulo); font-size: 1.7rem; font-weight: 700; margin: 10px 0 16px; color: var(--bronce); }

@@ -7,6 +7,7 @@ const mensaje = document.getElementById("mensaje");
 const bannerProducto = document.getElementById("producto-unico");
 const textoBanner = document.getElementById("producto-unico-texto");
 const botonVerTodo = document.getElementById("ver-todo");
+const selectorOrden = document.getElementById("orden");
 
 // ---------- Datos ----------
 const URL_PRODUCTOS = "productos.json";
@@ -56,10 +57,16 @@ function cargarCategorias() {
 
   // Si algún producto tiene "verano": true, aparece una sección Verano con todos ellos
   const hayVerano = productos.some((producto) => producto.verano === true);
-  const lista = hayVerano ? ["todas", "Verano", ...categorias] : ["todas", ...categorias];
+  // Si algún producto tiene "popular": true, aparece el filtro "Más pedidos"
+  const hayPopulares = productos.some((producto) => producto.popular === true);
+  const especiales = [];
+  if (hayPopulares) especiales.push("Populares");
+  if (hayVerano) especiales.push("Verano");
+  const lista = ["todas", ...especiales, ...categorias];
 
   const botones = lista.map((categoria) => {
-    const texto = categoria === "todas" ? "Todas" : categoria;
+    const textos = { todas: "Todas", Populares: "Más pedidos" };
+    const texto = textos[categoria] || categoria;
     const activo = categoria === categoriaActiva;
     return `<button type="button" class="categoria-boton" data-categoria="${categoria}" aria-pressed="${activo}">${texto}</button>`;
   });
@@ -85,13 +92,22 @@ function filtrarProductos() {
     const coincideCategoria =
       categoria === "todas" ||
       producto.categoria === categoria ||
-      (categoria === "Verano" && producto.verano === true);
+      (categoria === "Verano" && producto.verano === true) ||
+      (categoria === "Populares" && producto.popular === true);
 
     return coincideTexto && coincideCategoria;
   });
 
-  // Los productos agotados van al final (sort es estable: el resto mantiene su orden)
-  return filtrados.sort((a, b) => Number(Boolean(a.agotado)) - Number(Boolean(b.agotado)));
+  // Orden elegido por el usuario. Los agotados siempre van al final;
+  // en "Orden del catálogo" el resto mantiene su orden (sort es estable).
+  const orden = selectorOrden.value;
+  return filtrados.sort((a, b) => {
+    const agotados = Number(Boolean(a.agotado)) - Number(Boolean(b.agotado));
+    if (agotados !== 0) return agotados;
+    if (orden === "precio-menor") return a.precio - b.precio;
+    if (orden === "precio-mayor") return b.precio - a.precio;
+    return 0;
+  });
 }
 
 // ---------- Dar formato de precio argentino ----------
@@ -173,6 +189,7 @@ function crearTarjeta(producto) {
         <span aria-hidden="true">🧉</span>
         ${crearImagen(foto, producto.nombre)}
         ${agotado ? `<span class="etiqueta-agotado">Agotado</span>` : ""}
+        ${!agotado && producto.popular ? `<span class="etiqueta-popular">Más pedido</span>` : ""}
       </div>
       <div class="info">
         <span class="categoria">${producto.subcategoria || producto.categoria}</span>
@@ -562,6 +579,10 @@ dialogo.addEventListener("click", (evento) => {
 
 // ---------- Eventos: se vuelve a filtrar cada vez que el usuario cambia algo ----------
 buscador.addEventListener("input", () => {
+  salirDeProductoUnico();
+  mostrarProductos();
+});
+selectorOrden.addEventListener("change", () => {
   salirDeProductoUnico();
   mostrarProductos();
 });

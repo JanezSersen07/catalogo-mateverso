@@ -134,8 +134,14 @@ input {
   padding: 12px 20px;
 }
 
+.busqueda {
+  display: flex;
+  gap: 8px;
+}
+
 .busqueda input {
-  width: 100%;
+  flex: 1 1 0;
+  min-width: 0;
   padding: 12px 16px 12px 44px;
   font-size: 1rem;
   color: var(--tinta);
@@ -145,6 +151,25 @@ input {
   background-position: 14px center;
   border: 1.5px solid var(--linea);
   border-radius: 12px;
+}
+
+.busqueda select {
+  flex: 0 0 auto;
+  max-width: 44%;
+  padding: 12px 10px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--tinta);
+  background-color: var(--papel);
+  border: 1.5px solid var(--linea);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.busqueda select:focus {
+  outline: none;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(63, 90, 40, 0.18);
 }
 
 .busqueda input::placeholder {
@@ -885,3 +910,57 @@ input {
 .todos-productos li { padding: 2px 0; break-inside: avoid; }
 .todos-productos a { color: var(--gris); }
 .todos-productos a:hover { color: var(--verde); }
+
+/* Filtro "Más pedidos" y etiqueta de los productos populares */
+.categoria-boton[data-categoria="Populares"]:not([aria-pressed="true"]) {
+  border-color: var(--bronce);
+}
+
+.etiqueta-popular {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--bronce);
+  border-radius: 999px;
+}
+
+/* Botón fijo de consultas por WhatsApp (sube cuando aparece "Mi pedido") */
+.boton-consulta {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: var(--verde);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.45);
+}
+
+.boton-consulta:hover {
+  background-color: var(--verde-profundo);
+}
+
+.boton-consulta span {
+  display: none;
+}
+
+.boton-pedido:not([hidden]) ~ .boton-consulta {
+  bottom: 84px;
+}
+
+@media (min-width: 640px) {
+  .boton-consulta span {
+    display: inline;
+  }
+}

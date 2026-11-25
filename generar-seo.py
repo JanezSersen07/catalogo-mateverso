@@ -88,6 +88,8 @@ def pagina_producto(p, todos):
     insignias = ""
     if agotado:
         insignias += '<span class="insignia agotado">Agotado por ahora</span>'
+    if p.get("popular") and not agotado:
+        insignias += '<span class="insignia popular">Más pedido</span>'
     if p.get("verano"):
         insignias += '<span class="insignia verano">Verano</span>'
 

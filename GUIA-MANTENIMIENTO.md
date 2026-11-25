@@ -178,3 +178,27 @@ No tenés que hacer nada extra: al subir los cambios (`git push`), GitHub genera
 
 - Si el tilde sale **rojo**, hacé clic en esa ejecución para ver el error. Lo más común es un `slug` repetido en `productos.json` (el mensaje te dice cuál).
 - El `slug` de cada producto es parte de su link (`.../p/<slug>/`). Si lo cambiás, el link viejo deja de funcionar, así que conviene no tocarlo una vez que lo compartiste.
+
+## Productos "Más pedidos"
+
+Para que un producto muestre la etiqueta **Más pedido** y aparezca en el filtro **Más pedidos**, agregale `"popular": true` en `productos.json`, igual que `"agotado"` o `"verano"`:
+
+```json
+{
+  "id": 12,
+  "slug": "algarrobo-roma-2",
+  "nombre": "Algarrobo Roma 2",
+  "popular": true,
+  ...
+}
+```
+
+- El filtro **Más pedidos** aparece solo cuando al menos un producto tiene `"popular": true`.
+- Para elegir cuáles marcar, mirá la opción **12. Productos más vendidos** del sistema de ventas: ahí ves qué se vendió más de verdad.
+- Para sacar la etiqueta, borrá esa línea o cambiá `true` por `false`.
+- Un producto agotado no muestra la etiqueta aunque sea popular.
+
+## Ordenar y consultas
+
+- Arriba del catálogo hay un selector para **ordenar por precio** (menor a mayor o mayor a menor). Los productos agotados siempre quedan al final.
+- El botón **Consultas** (esquina inferior derecha) abre un chat de WhatsApp con el mensaje "Hola Mateverso! Tengo una consulta." Si cambia tu número, se edita en `index.html`, en el link `boton-consulta`.
