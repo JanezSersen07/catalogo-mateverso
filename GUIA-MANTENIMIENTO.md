@@ -171,3 +171,10 @@ Cuando vuelve a haber stock, borrá esa línea (o poné `false`) y subí el camb
 - Para revisar que el archivo esté bien: abrilo en VS Code y mirá que no haya subrayados rojos, o pegalo en https://jsonlint.com.
 
 Si algo se rompe y no lo encontrás, podés volver atrás con `git checkout productos.json` (deshace los cambios que todavía no guardaste en un commit).
+
+## Páginas de producto y Google
+
+No tenés que hacer nada extra: al subir los cambios (`git push`), GitHub genera solo la página de cada producto y el sitemap. Tarda 1 o 2 minutos en publicarse; podés ver el avance en la pestaña **Actions** del repositorio (un tilde verde significa que ya está en línea).
+
+- Si el tilde sale **rojo**, hacé clic en esa ejecución para ver el error. Lo más común es un `slug` repetido en `productos.json` (el mensaje te dice cuál).
+- El `slug` de cada producto es parte de su link (`.../p/<slug>/`). Si lo cambiás, el link viejo deja de funcionar, así que conviene no tocarlo una vez que lo compartiste.

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Página no encontrada | Mateverso</title>
+  <style>
+    body { font-family: "Segoe UI", system-ui, sans-serif; background: #f2efe5; color: #1d2318;
+           display: grid; place-items: center; min-height: 100vh; text-align: center; padding: 24px; }
+    a { color: #3f5a28; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>No encontramos esa página</h1>
+    <p>Puede que el producto ya no esté. <a id="volver" href="./">Ver el catálogo completo</a></p>
+  </main>
+  <script>
+    // Si alguien abre un link de producto (p/<slug>/) y esa página todavía no existe,
+    // lo llevamos al catálogo con ese producto a la vista.
+    const partes = location.pathname.split("/").filter(Boolean);
+    const i = partes.indexOf("p");
+    if (i !== -1 && partes[i + 1]) {
+      const raiz = "/" + partes.slice(0, i).join("/") + (i ? "/" : "");
+      const variante = new URLSearchParams(location.search).get("variante");
+      let destino = raiz + "?producto=" + encodeURIComponent(partes[i + 1]);
+      if (variante) destino += "&variante=" + encodeURIComponent(variante);
+      location.replace(destino);
+    } else {
+      const raiz = "/" + partes.slice(0, 1).join("/") + "/";
+      document.getElementById("volver").href = partes.length ? raiz : "./";
+    }
+  </script>
+</body>
+</html>

@@ -234,11 +234,12 @@ function leerProductoDeLaUrl() {
 }
 
 // ---------- Armar el link directo de un producto ----------
+// El link que se comparte lleva a la página propia del producto (p/<slug>/),
+// que muestra la foto y el nombre al pegarlo en WhatsApp o Instagram.
 function armarLinkProducto(slug) {
-  const url = new URL(window.location.href);
+  const url = new URL("p/" + slug + "/", window.location.href);
   url.search = "";
   url.hash = "";
-  url.searchParams.set("producto", slug);
 
   if (seleccion[slug]) {
     url.searchParams.set("variante", seleccion[slug]);

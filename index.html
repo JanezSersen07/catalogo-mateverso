@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Catálogo de Mateverso: mates, bombillas, termos y yerbas. Armá tu pedido y coordinamos la entrega por WhatsApp.">
+  <link rel="canonical" href="https://janezsersen07.github.io/catalogo-mateverso/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_AR">
   <meta property="og:site_name" content="Mateverso">
@@ -21,7 +22,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=DM+Sans:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Mateverso",
+    "description": "Mates, bombillas, termos y yerbas por encargo. Ciudad Evita, Buenos Aires.",
+    "url": "https://janezsersen07.github.io/catalogo-mateverso/",
+    "image": "https://janezsersen07.github.io/catalogo-mateverso/logo/vista-previa.jpg",
+    "telephone": "+5492944671384",
+    "address": { "@type": "PostalAddress", "addressLocality": "Ciudad Evita", "addressRegion": "Buenos Aires", "addressCountry": "AR" },
+    "sameAs": ["https://www.instagram.com/mateversoo_/", "https://www.tiktok.com/@mateversoo_"]
+  }
+  </script>
 </head>
 <body>
   <header class="portada">
@@ -127,6 +141,8 @@
     <p class="pie-aparte">Proyecto de portfolio, hecho con HTML, CSS y JavaScript.</p>
   </footer>
 
+  <!-- LISTA-PRODUCTOS -->
+
   <button type="button" id="boton-pedido" class="boton-pedido" hidden>
     <span>Mi pedido <span id="cantidad-pedido" class="cantidad-pedido">0</span></span>
     <span id="total-boton" class="total-boton"></span>
@@ -154,6 +170,6 @@
     <div id="galeria-fotos" class="galeria-fotos"></div>
   </dialog>
 
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>

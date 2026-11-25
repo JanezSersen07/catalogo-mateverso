@@ -1,23 +1,8 @@
 # Catálogo Mateverso
 
-Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y filtro por categoría. Hecho con **HTML, CSS y JavaScript** (sin librerías). Muestra más de 180 productos reales y arma el pedido por WhatsApp.
+Catálogo online de **Mateverso**, mi emprendimiento de mates, con buscador y filtro por categoría. Hecho con **HTML, CSS y JavaScript** (sin librerías). Muestra más de 160 productos reales.
 
 🔗 **Ver online:** https://janezsersen07.github.io/catalogo-mateverso/
-
-![Catálogo Mateverso](captura-catalogo.png)
-
-<details>
-<summary>Más capturas</summary>
-
-La sección **Verano**, que reúne los productos de temporada:
-
-![Sección Verano](captura-verano.png)
-
-En el celular:
-
-<img src="captura-catalogo-movil.png" alt="Catálogo en el celular" width="320">
-
-</details>
 
 ## Qué hace
 
@@ -105,6 +90,17 @@ La carpeta `logo/` tiene el logo de Mateverso en versión clara (para fondos osc
 Cada tarjeta tiene un botón "Copiar link". El link tiene la forma `…/catalogo-mateverso/?producto=slug` (y `&variante=Negro` si había una variante elegida). Al abrirlo, el catálogo muestra solo ese producto, con un botón "Ver todo el catálogo". Si el producto ya no existe, avisa y muestra el catálogo completo.
 
 Se usa el campo `slug` de `productos.json`, así que no hay que cargar nada nuevo. Si cambiás el `slug` de un producto, los links que ya compartiste con el slug viejo dejan de apuntar a él.
+
+## Cómo aparece en Google (SEO)
+
+El catálogo carga los productos con JavaScript, lo que a los buscadores les cuesta leer. Para resolverlo, cada vez que se suben cambios a `main`, una **GitHub Action** (`.github/workflows/publicar.yml`) corre `generar-seo.py` y publica el sitio con:
+
+- Una **página propia por producto** (`p/<slug>/`), con título, descripción, foto y datos estructurados (JSON-LD `Product` con precio y disponibilidad).
+- Un **`sitemap.xml`** con todas las páginas, para enviarlo a Google Search Console.
+- Una lista de enlaces a todos los productos al final del inicio, para que se puedan rastrear.
+- **Vistas previas por producto**: al compartir el link de un producto en WhatsApp o Instagram se ve su foto y nombre.
+
+Las páginas se generan en cada publicación a partir de `productos.json`, así que **no hay que hacer nada a mano**: agregar, cambiar o borrar productos sigue siendo editar un solo archivo. `404.html` redirige al catálogo los links de productos que ya no existen.
 
 ## Productos agotados
 

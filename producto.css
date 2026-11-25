@@ -1,0 +1,66 @@
+/* Páginas de producto (p/<slug>/). Mismos colores y tipografías que style.css */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --verde-profundo: #243516; --verde: #3f5a28; --yerba: #7a9a45; --verde-claro: #e6ebd8;
+  --crema: #f2efe5; --papel: #fcfbf7; --bronce: #a9782b; --tinta: #1d2318; --gris: #5d6556;
+  --linea: rgba(36, 53, 22, 0.12);
+  --fuente-titulo: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --fuente-texto: "DM Sans", "Segoe UI", system-ui, sans-serif;
+}
+body { font-family: var(--fuente-texto); line-height: 1.5; background: var(--crema); color: var(--tinta); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--bronce); outline-offset: 2px; }
+
+.barra { display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 10px 16px; background: var(--verde-profundo); color: #fff; }
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none;
+  font-family: var(--fuente-titulo); font-weight: 700; font-size: 1.15rem; }
+.volver { font-size: .9rem; text-decoration: none; border: 1px solid rgba(255,255,255,.4);
+  padding: 6px 12px; border-radius: 999px; }
+.volver:hover { background: rgba(255,255,255,.12); }
+
+.ficha { max-width: 1040px; margin: 0 auto; padding: 16px 16px 40px; }
+.migas { font-size: .85rem; color: var(--gris); margin-bottom: 14px; }
+.migas a { text-decoration: none; }
+.migas a:hover { text-decoration: underline; }
+.ficha-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 760px) { .ficha-grid { grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: start; } }
+
+.foto { background: #fff; border: 1px solid var(--linea); border-radius: 14px; aspect-ratio: 1 / 1;
+  display: grid; place-items: center; overflow: hidden; }
+.foto img { width: 100%; height: 100%; object-fit: contain; }
+.miniaturas { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.miniaturas img { cursor: pointer; width: 64px; height: 64px; object-fit: contain; background: #fff;
+  border: 1px solid var(--linea); border-radius: 8px; }
+
+.insignias { display: flex; gap: 8px; margin-bottom: 8px; }
+.insignia { font-size: .78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+.insignia.agotado { background: #f3dede; color: #7a2323; }
+.insignia.verano { background: var(--verde-claro); color: var(--verde); }
+h1 { font-family: var(--fuente-titulo); font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.15; color: var(--verde-profundo); }
+.precio { font-family: var(--fuente-titulo); font-size: 1.7rem; font-weight: 700; margin: 10px 0 16px; color: var(--bronce); }
+.etiqueta { font-weight: 700; font-size: .9rem; margin-bottom: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.chip { font: inherit; font-size: .92rem; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+  background: #fff; border: 1.5px solid var(--linea); color: var(--tinta); }
+.chip[aria-pressed="true"] { background: var(--verde-profundo); border-color: var(--verde-profundo); color: #fff; }
+
+.acciones { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.boton { display: block; text-align: center; text-decoration: none; font-weight: 700;
+  padding: 13px 18px; border-radius: 12px; }
+.boton.principal { background: var(--verde); color: #fff; }
+.boton.principal:hover { background: var(--verde-profundo); }
+.boton.secundario { background: #fff; color: var(--verde-profundo); border: 1.5px solid var(--verde-profundo); }
+.boton.secundario:hover { background: var(--verde-claro); }
+.nota { font-size: .85rem; color: var(--gris); }
+
+.relacionados { margin-top: 36px; }
+.relacionados h2 { font-family: var(--fuente-titulo); font-size: 1.2rem; margin-bottom: 12px; color: var(--verde-profundo); }
+.relacionados ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+.relacionados a { display: flex; flex-direction: column; gap: 4px; text-decoration: none; background: var(--papel);
+  border: 1px solid var(--linea); border-radius: 12px; padding: 8px; font-size: .85rem; height: 100%; }
+.relacionados a:hover { border-color: var(--yerba); }
+.relacionados img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; border-radius: 8px; }
+.relacionados strong { color: var(--bronce); }
+
+.pie { text-align: center; padding: 22px 16px 30px; font-size: .88rem; color: var(--gris); border-top: 1px solid var(--linea); }

@@ -871,3 +871,17 @@ input {
     transition: none !important;
   }
 }
+
+/* Lista de enlaces a todos los productos (la arma generar-seo.py al publicar) */
+.todos-productos {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 16px 24px;
+  font-size: 0.9rem;
+}
+.todos-productos summary { cursor: pointer; color: var(--verde); font-weight: 700; padding: 8px 0; }
+.todos-productos h3 { font-family: var(--fuente-titulo); font-size: 1rem; margin: 14px 0 4px; color: var(--verde-profundo); }
+.todos-productos ul { list-style: none; columns: 2 220px; column-gap: 20px; }
+.todos-productos li { padding: 2px 0; break-inside: avoid; }
+.todos-productos a { color: var(--gris); }
+.todos-productos a:hover { color: var(--verde); }
